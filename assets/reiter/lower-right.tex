@@ -1,0 +1,44 @@
+\documentclass[border=1cm]{standalone}
+\usepackage{logicpuzzle}
+\begin{document}
+  \begin{logicpuzzle}[rows=5,columns=5,width=5cm]
+
+    %%% Shading %%%
+    \begin{puzzlebackground}
+      %%% Big-L Quadrant
+      \colorarea{green!50}{\tikzpath{1}{1}{6,8,8,4,2,2}}
+      \colorarea{orange!80}{\tikzpath{2}{1}{6,6,6,6,8,4,4,4,8,8,8,8,4,2,2,2,2,2}}
+      \colorarea{yellow}{\tikzpath{3}{2}{6,6,8,8,4,2,4,2}}
+      \colorarea{blue!40}{\tikzpath{5}{2}{6,8,8,4,2,2}}
+      \colorarea{blue!40}{\tikzpath{1}{3}{6,8,8,8,4,2,2,2}}
+      \colorarea{green!50}{\tikzpath{3}{3}{6,8,6,6,8,4,4,4,2,2}}
+      \colorarea{yellow}{\tikzpath{3}{5}{6,6,6,8,4,4,4,2}}
+
+    \end{puzzlebackground}
+
+
+    %%% Big-L Quadrant, %%%
+    \framearea{black}{\tikzpath{1}{1}{6,8,8,4,2,2}}
+    \framearea{black}{\tikzpath{2}{1}{6,6,6,6,8,4,4,4,8,8,8,8,4,2,2,2,2,2}}
+    \framearea{black}{\tikzpath{3}{2}{6,6,8,8,4,2,4,2}}
+    \framearea{black}{\tikzpath{5}{2}{6,8,8,4,2,2}}
+    \framearea{black}{\tikzpath{1}{3}{6,8,8,8,4,2,2,2}}
+    \framearea{black}{\tikzpath{3}{3}{6,8,6,6,8,4,4,4,2,2}}
+    \framearea{black}{\tikzpath{3}{5}{6,6,6,8,4,4,4,2}}
+
+    \setrule{1}{2}{3-}
+    \setrule{4}{3}{50\times}
+    \setrule{5}{3}{1-}
+    \setrule{3}{4}{9+}
+    \setrule{1}{5}{10+}
+    \setrule{2}{5}{4800\times}
+    \setrule{3}{5}{6+}
+
+    \setcell{1}{2}{4}
+    \setcell{2}{5}{4}
+    \setcell{3}{1}{2}
+    \setcell{4}{5}{1}
+    \setcell{5}{2}{3}
+
+  \end{logicpuzzle}
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass{puzzlehunt}
+
+\usepackage[final]{pdfpages}
+\usepackage{amsmath,amssymb}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{array}
+
+\usepackage{environ}
+
+\usepackage{chessfss}
+
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage{wrapfig}
+
+
+% Contest name macros
+\newcommand{\phEventName}{MaPP Challenge '18 }
+\newcommand{\phEventAbbr}{MC18 }
+
+\title{\phEventName}
+\author{Mathematical Puzzle Programs}
+\date{\today}
+
+% \phMarkDraft
+
+\phSetSquareLogo{assets/mapp-square.pdf}
+\phSetBannerLogo{assets/mapp-banner.pdf}
+
+\begin{document}
+
+% \frontmatter % roman page numbers
+
+\phTitlePage
+\phTableOfContents
+
+% \mainmatter % arabic page numbers
+
+\phPart{Game Overview}
+
+\phChapter{Credits}
+\input{overview/credits.tex}
+
+% \phChapter{Print and Supply List}
+% \input{overview/printList.tex}
+
+% \phChapter{Rules}
+% \input{overview/rules.tex}
+
+% \phChapter{Code Sheet}
+% \input{overview/codes.tex}
+
+
+% \phChapter{Scoresheet}
+% \input{overview/scoresheet.tex}
+
+
+
+% %opening puzzle
+% \phPart{Opening Puzzle}
+% \input{opener/puzzle-scsu.tex}
+
+% %main puzzles
+%\phPart{Puzzles 1 - 4\\Catch your Mobimon!}
+% \input{reiter/puzzle.tex}
+
+
+% \input{sarver/puzzle.tex}
+
+
+% \input{night/puzzle.tex}
+
+
+% \input{couch/puzzle.tex}
+
+
+% \input{dobie/puzzle.tex}
+
+% bonus puzzle
+\phPart{Bonus Puzzle\\Gotta snag 'em all in the Expedition Zone!}
+\input{bonuspuzzle/puzzle.tex}
+% %metapuzzle
+% \phPart{The Metapuzzle and Hidden Puzzle}
+% \input{metapuzzle/puzzle.tex}
+
+% \input{hidden/puzzle.tex}
+
+%
+%
+% %survey
+% \newpage
+% \includepdf[pages=1]{student-survey.pdf}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

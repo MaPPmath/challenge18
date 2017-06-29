@@ -1,0 +1,40 @@
+\documentclass[border=1cm]{standalone}
+\usepackage{logicpuzzle}
+\begin{document}
+\begin{logicpuzzle}[rows=5,columns=5,width=5cm]
+
+  %%% Shading %%%
+  \begin{puzzlebackground}
+    %%% Big-E Quadrant
+    \colorarea{yellow}{\tikzpath{1}{1}{6,6,6,8,4,4,8,6,8,4,8,6,6,8,4,4,4,2,2,2,2,2}}
+    \colorarea{blue!40}{\tikzpath{4}{1}{6,6,8,4,4,2}}
+    \colorarea{green!50}{\tikzpath{2}{2}{6,6,8,8,4,2,4,2}}
+    \colorarea{yellow}{\tikzpath{4}{2}{6,6,8,4,8,4,2,2}}
+    \colorarea{green!50}{\tikzpath{5}{3}{6,8,8,8,4,4,2,6,2,2}}
+    \colorarea{orange!80}{\tikzpath{2}{4}{6,6,6,8,4,4,4,2}}
+  \end{puzzlebackground}
+
+
+  %%% Big-E Quadrant, %%%
+  \framearea{black}{\tikzpath{1}{1}{6,6,6,8,4,4,8,6,8,4,8,6,6,8,4,4,4,2,2,2,2,2}}
+  \framearea{black}{\tikzpath{4}{1}{6,6,8,4,4,2}}
+  \framearea{black}{\tikzpath{2}{2}{6,6,8,8,4,2,4,2}}
+  \framearea{black}{\tikzpath{4}{2}{6,6,8,4,8,4,2,2}}
+  \framearea{black}{\tikzpath{5}{3}{6,8,8,8,4,4,2,6,2,2}}
+  \framearea{black}{\tikzpath{2}{4}{6,6,6,8,4,4,4,2}}
+
+  \setrule{4}{1}{1-}
+  \setrule{3}{3}{9+}
+  \setrule{4}{3}{9+}
+  \setrule{2}{4}{9+}
+  \setrule{1}{5}{23040\times}
+  \setrule{4}{5}{12\times}
+
+  \setcell{1}{5}{5}
+  \setcell{2}{5}{2}
+  \setcell{3}{4}{1}
+  \setcell{4}{3}{2}
+  \setcell{5}{5}{3}
+
+\end{logicpuzzle}
+\end{document}
