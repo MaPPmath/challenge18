@@ -1,7 +1,36 @@
 
 \phChapterWorksheet{Bonus Puzzle}{Catch Mobimon in the Expedition Zone!}
 
-\vspace{-12mm}
+Take a trip through the \textbf{Expedition Zone} to catch as many Mobimon as you
+can! Theres a catch, though: your path through the Expedition Zone has to follow
+certain \textbf{path pieces.} Here are the rules:
+\begin{enumerate}
+\item Two path pieces are adjacent if at least one square in one piece is
+  orthogonally (\textbf{not diagonally}) adjacent to at least one square in the
+  other piece.
+\item You must have a path piece adjacent to the \textbf{starting line}.
+\item You must have a path piece adjacent to the \textbf{finish line}.
+\item You may not have any breaks in your path. It must be an \textbf{unbroken
+    path} of adjacent pieces from start to finish.
+\item Your path may cross itself.
+\end{enumerate}
+
+You may notice several Mobimon inhabiting the Expedition Zone! These Mobimon are
+represented by \textbf{numbers,} and each number is its \textbf{strength.} To
+catch a Mobimon, you must
+
+\begin{enumerate}
+\item make sure your path goes over that Mobimon, and
+\item a piece on that Mobimon must have \textbf{more squares than that Mobimon's
+  strength}.
+\end{enumerate}
+
+Your score is the \textbf{sum of the strengths of the Mobimon you catch}. The
+teams with the two highest scores get \textbf{Victory Points}! Good luck!
+
+\newpage
+
+\phSection{The Expedition Zone}
 
 \begin{center}
   \begin{tikzpicture}
@@ -56,6 +85,8 @@
     \node at (145mm, 75mm){4};
   \end{tikzpicture}
 \end{center}
+
+\phSection{Path Pieces}
 
 \begin{center}
   \begin{tikzpicture}
