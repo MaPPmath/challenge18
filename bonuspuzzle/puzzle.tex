@@ -90,39 +90,40 @@ teams with the two highest scores get \textbf{Victory Points}! Good luck!
 
 \begin{center}
   \begin{tikzpicture}
+    % trailing rectangle is needed for filling with color
     % monomino
-    \draw[step=10mm] (0, -2) grid (1,-1);
+    \draw[step=10mm, fill=black!20] (0, -2) grid (1,-1) rectangle (0,-2);
     
     % domino
-    \draw[step=10mm] (0,0) grid (2,1);
+    \draw[step=10mm, fill=black!20] (0,0) grid (2,1) rectangle (0,0);
     
     % trominoes
     %% I
-    \draw[step=10mm] (0,2) grid (3,3);
+    \draw[step=10mm, fill=black!20] (0,2) grid (3,3) rectangle (0,2);
     %% L
-    \draw[step=10mm] (4,2) grid (6,3);
-    \draw[step=10mm] (4,3) grid (5,4);
+    \draw[step=10mm, fill=black!20] (4,2) grid (6,3) rectangle (4,2);
+    \draw[step=10mm, fill=black!20] (4,3) grid (5,4) rectangle (4,3);
 
     % tetraminoes
     %% I
-    \draw[step=10mm] (0,5) grid (4,6);
+    \draw[step=10mm, fill=black!20] (0,5) grid (4,6) rectangle (0,5);
     %% O
-    \draw[step=10mm] (5,5) grid (7,7);
+    \draw[step=10mm, fill=black!20] (5,5) grid (7,7) rectangle (5,5);
     %% T
-    \draw[step=10mm] (8,5) grid (11,6);
-    \draw[step=10mm] (9,6) grid (10,7);
+    \draw[step=10mm, fill=black!20] (8,5) grid (11,6) rectangle (8,5);
+    \draw[step=10mm, fill=black!20] (9,6) grid (10,7) rectangle (9,6);
     %% L
-    \draw[step=10mm] (12,5) grid (13,8);
-    \draw[step=10mm] (13,5) grid (14,6);
+    \draw[step=10mm, fill=black!20] (12,5) grid (13,8) rectangle (12,5);
+    \draw[step=10mm, fill=black!20] (13,5) grid (14,6) rectangle (13,5);
     %% J
-    \draw[step=10mm] (0,9) grid (2,10);
-    \draw[step=10mm] (1,10) grid (2,12);
+    \draw[step=10mm, fill=black!20] (0,9) grid (2,10) rectangle (0,9);
+    \draw[step=10mm, fill=black!20] (1,10) grid (2,12) rectangle (1,10);
     %% Z
-    \draw[step=10mm] (3,10) grid (5,11);
-    \draw[step=10mm] (4,9) grid (6,10);
+    \draw[step=10mm, fill=black!20] (3,10) grid (5,11) rectangle (3,10);
+    \draw[step=10mm, fill=black!20] (4,9) grid (6,10) rectangle (4,9);
     %% S
-    \draw[step=10mm] (7,9) grid (9,10);
-    \draw[step=10mm] (8,10) grid (10,11);
+    \draw[step=10mm, fill=black!20] (7,9) grid (9,10) rectangle (7,9);
+    \draw[step=10mm, fill=black!20] (8,10) grid (10,11) rectangle (8,10);
   \end{tikzpicture}
 \end{center}
 
