@@ -1,0 +1,40 @@
+M,J,Y,%,M,H,S,P,D,B,D,G,J,Y,L,C,Ellipse (for tree hole)
+P,E,P,Z,J,S,Q,A,E,X,Z,S,!,T,O,A,Used in final extraction
+T,K,Q,W,10,L,W,M,K,$,M,N,M,E,V,T,Used as folding requirements
+5,T,Z,B,K,~,Y,P,X,Z,~,7,Z,P,1,O,Other area visible in completed puzzle
+V,O,%,B,N,C,6,P,E,C,D,Y,@,A,J,L,Additional symbols (hidden in completed puzzle)
+C,Y,C,Y,T,Q,J,D,Y,K,X,V,L,E,H,B,
+N,I,S,E,Z,S,Z,C,A,U,L,!,B,R,H,J,
+N,A,U,E,D,G,C,C,M,Z,P,I,O,L,F,G,
+F,E,Q,Q,Z,D,O,U,P,T,K,N,T,D,G,F,
+B,R,G,C,$,U,X,Y,Z,U,G,D,E,F,S,A,
+L,S,B,Y,B,H,I,W,G,G,Q,N,Q,L,Y,A,Symbols used in extraction:@#$%
+Y,S,I,S,P,W,A,E,G,A,R,%,E,L,F,Y,@=Bike #=Coffee $=Die %=Eggo
+L,!,F,I,U,Q,A,D,N,C,C,L,T,A,J,K,
+N,N,Y,O,T,W,J,C,T,H,Y,R,N,V,F,N,
+B,T,R,N,B,O,F,R,K,X,S,H,I,D,L,Q,
+S,W,D,R,N,Q,P,J,I,G,C,G,K,F,H,M,
+G,O,#,Y,U,R,F,D,9,K,D,M,F,U,P,L,
+F,I,I,Q,E,P,Q,I,C,V,Y,R,A,$,A,B,
+T,G,I,M,R,W,#,Q,Z,T,Q,T,S,I,J,A,
+I,H,R,S,J,V,Z,~,~,N,A,F,S,N,L,F,
+#,V,A,T,Q,I,Y,~,~,B,@,M,D,M,K,S,"`=IF(ISBLANK('Strip to Fold'!A1),CHAR(RANDBETWEEN(65,90)),'Strip to Fold'!A1)"
+N,M,T,L,G,W,R,~,~,F,G,F,J,U,U,O,
+O,I,K,L,J,P,U,~,~,H,B,D,B,S,S,Z,
+O,N,Y,W,P,B,3,C,H,M,M,I,H,S,S,Z,
+L,I,N,@,P,A,P,I,E,R,D,G,O,Z,J,C,
+K,D,Z,V,X,G,P,I,$,O,E,V,N,E,V,F,
+E,H,Y,L,N,F,O,N,V,E,H,W,R,K,B,V,
+M,U,U,W,N,J,O,L,I,L,T,H,J,A,D,D,
+B,H,E,M,T,X,A,V,K,4,Q,J,@,O,W,L,
+D,E,I,I,T,B,N,Y,D,L,J,P,P,G,Z,F,
+T,K,K,J,P,N,!,T,D,Q,U,P,M,P,K,E,
+B,W,H,$,O,M,I,J,M,M,Y,M,E,S,N,J,
+Q,O,D,X,V,G,O,X,B,K,I,J,O,Z,G,T,
+A,N,Z,Z,U,T,Y,W,#,M,B,M,L,S,Z,F,
+!,C,B,S,A,O,Y,B,V,Q,N,P,W,J,N,W,
+V,R,I,C,U,H,Y,O,I,H,H,A,C,F,G,X,
+W,H,M,H,T,Z,G,C,P,%,Q,I,S,N,P,B,
+V,R,A,R,F,K,V,W,M,F,D,O,W,U,G,R,
+#,Y,D,T,2,J,Y,P,8,W,Z,Y,A,A,J,Q,
+T,M,G,N,D,@,N,N,F,C,G,O,Y,S,U,N,
