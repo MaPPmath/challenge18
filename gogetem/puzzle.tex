@@ -23,22 +23,17 @@ Stones typically don't stay isolated for very long from other stones of the same
 color. Stones form a \textbf{group} if they are \textbf{directly next to each
   other on the grid,} but \textbf{not diagonally.}
 
-\gobansize{9}
 These stones form a group.
 
-\black{b2,c2,d2}
 \begin{center}
-  \showgoban
+  \includegraphics{gogetem/assets/explanation1-crop}
 \end{center}
-\cleargoban
 
 These stones \textbf{do not.} These are just three individual stones.
 
-\black{b2,c3,d4}
 \begin{center}
-  \showgoban
+  \includegraphics{gogetem/assets/explanation2-crop}
 \end{center}
-\cleargoban
 
 An individual stone has \textbf{liberties.} Liberties are the \textbf{empty
   spaces directly next to the stone on the grid,} but \textbf{not diagonally.}
@@ -47,14 +42,9 @@ no liberties, \textbf{it is captured.}
 
 The liberties of the black stones are marked with x's:
 
-\black{b2,d4}
-\white{e4,d5}
-\gobansymbol{b1,b3,a2,c2,c4,d3}{x}
 \begin{center}
-  \showgoban
+  \includegraphics{gogetem/assets/explanation3-crop}
 \end{center}
-\cleargoban
-\cleargobansymbols
 
 So the black stone on the lower left has \textbf{4 liberties,} and the black
 stone on the upper right \textbf{only has two liberties} because the other two
@@ -64,13 +54,9 @@ spaces around it are occupied by white stones.
 captured at the same time if the whole group has no liberties. The group of
 black stones below has \textbf{7 liberties.}
 
-\black{b2,c2,c3}
-\gobansymbol{b1,a2,b3,c4,d3,d2,c1}{x}
 \begin{center}
-  \showgoban
+  \includegraphics{gogetem/assets/explanation4-crop}
 \end{center}
-\cleargoban
-\cleargobansymbols
 
 A stone can normally \textbf{not} be played in a space where it has no
 liberties, with \textbf{one important exception.} A stone can be placed into a
@@ -87,72 +73,83 @@ gather.''
 You notice that each of the boards the old man shows you is \textbf{13 by
   13.} There are also \textbf{26 letters in the alphabet.} Hmmm...
 
-\gobansize{13}
-
-\white{f4,g3,g5,h4}
-\black{h3,h5,j4}
 \begin{center}
-  \showfullgoban
+  \contournumber{64}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at
+    (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards1-crop}};
+    % left board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (\x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
+          \x}}}};
+    % right board coordinate system
+  \foreach \x in {0,...,12} \node at (8.5 + \x * 0.58,
+  7.3){\contour{black}{\AlphAlph{\x + 14}}}; \foreach \x in {0,...,12} \node at
+  (8.2, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 - \x}}}};
+  \end{tikzpicture}
+
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at
+    (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards2-crop}};
+    % left board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (\x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
+          \x}}}};
+    % right board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (8.5 + \x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (8, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 - \x}}}};
+  \end{tikzpicture}
+  
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at
+    (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards3-crop}};
+    % left board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (\x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
+          \x}}}};
+    % right board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (8.7 + \x * 0.58, 7.5){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (8.2, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 - \x}}}};
+  \end{tikzpicture}
+
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at
+    (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards4-crop}};
+    % left board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (0.3 + \x * 0.58, 7.5){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
+          \x}}}};
+    % right board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (8.7 + \x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (8.2, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 - \x}}}};
+  \end{tikzpicture}
+
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at
+    (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards5-crop}};
+    % left board coordinate system
+    \foreach \x in {0,...,12}
+    \node at (\x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \foreach \x in {0,...,12}
+    \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
+          \x}}}};
+  \end{tikzpicture}
+
 \end{center}
-
-\cleargoban
-\white{c7,d8,e7,e8,e9,f9}
-\black{c6,d5,d7,e5,e6}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{k9,l9,m5,m7,m8,m11,n7,n11}
-\black{l10,m9,m10,n4,n5,n8,n10}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{a6,b7,b9,b10,c10,d7,d10,e8,e9,f9}
-\black{a7,a8,c9,d8,d9,e6,e7}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{a8,b7,c6,c9,d5,d8,e5,e7,f6}
-\black{b8,c7,c8,d6,d7,e6}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{a11,b11,c11,c12,c13}
-\black{a10,a12,b10,b13,c10,d10,d11,d12,d13}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{b7,b10,c7,c8,c11,c12,c13,d9,e8,e10,f9,g7,h7}
-\black{a8,c9,c10,d8,d10,d11,e7,e11,f6,f7,f8,f10,g9,g10}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{c10,d7,e9,e10,f8,f10,g8,h7,h8,j8,k5,k8,k9}
-\black{c11,e8,f9,g7,g9,h6,h9,j5,j6,j7,j9,k4,k7,k10,l8,l9,m9}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-\white{g7,g8}
-\black{e5,f3,f4,f7,f8,g3,g6,h2,h7,h8,j2,k2,k7,k8,l3,l6,l9,m3,m4,m7,m8,n5}
-\begin{center}
-  \showfullgoban
-\end{center}
-
-\cleargoban
-
 Where should you find the \mappMobimon{}?
 
 \begin{tikzpicture}
