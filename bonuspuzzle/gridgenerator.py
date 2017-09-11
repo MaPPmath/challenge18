@@ -1,35 +1,41 @@
 import random
 
+
 class GridGenerator:
-    def __init__(self, *, density1=0.1, density2=0.05, density3=0.025, density4=0.0125):
+    def __init__(self, height, width):
         self.cells = []
+        self.height = height
+        self.width = width
+        self.randomlist = []
         random.seed()
-        for i in range(0, 15):
-            self.cells.append([])
-            for j in range(0, 20):
-                prob = random.random()
-                if prob <= density4:
-                    self.cells[i].append(4)
-                elif prob <= density3:
-                    self.cells[i].append(3)
-                elif prob <= density2:
-                    self.cells[i].append(2)
-                elif prob <= density1:
-                    self.cells[i].append(1)
-                else:
-                    self.cells[i].append(0)
+        for i in range(0,height):
+            for j in range(0,width):
+                self.cells.append(0)
+
+        while sum(self.randomlist) < 500:
+            if 500 - sum(self.randomlist) < 10:
+                self.randomlist.append(500 - sum(self.randomlist))
+            else:
+                self.randomlist.append(random.randint(1,9))
+        for i in range(0,height):
+            for j in range(0,width):
+                if len(self.randomlist) > 0:
+                    self.cells[i * height + j] = self.randomlist.pop()
+        random.shuffle(self.cells)
 
     def __str__(self):
         results = []
-        for i in range(0, 15):
-            for j in range(0, 20):
-                if self.cells[i][j] != 0:
+        for i in range(0, self.height):
+            for j in range(0, self.width):
+                if self.cells[i * self.height + j] != 0:
                     results.append("\\node at (" + str(i*10 + 5) + "mm, " +
-                                   str(j*10 + 5) + "mm){" + str(self.cells[i][j]) + "};")
+                                   str(j*10 + 5) + "mm){" + str(self.cells[i * self.height + j]) + "};")
         return "\n".join(results)
 
 if __name__ == "__main__":
-    grid = GridGenerator()
+    grid = GridGenerator(12,12)
     print(grid)
-    f = open("gridgen.out", mode='w', encoding="utf-8")
+    print(grid.cells)
+    print(sum(grid.cells))
+    f = open("./gridgen.out", mode='w', encoding="utf-8")
     f.write(str(grid))
