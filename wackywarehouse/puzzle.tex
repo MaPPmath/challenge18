@@ -3,79 +3,174 @@
 
 \phChapterWorksheet{When Push Comes to Shove}{Main Puzzle 1}
 
-While training your \mappMobimon{} on Interstate \( \pi \), you are approached
-by
-Dockworker Dave, who challenges you to a \mappMobimon{} battle! You of course
-accept, because turning him down would be \textbf{rude}.
+\newcommand{\mappBoxRow}[2]{
+  \fill[color=lightgray] #1 rectangle #2;
+  \draw[step=1]          #1 grid #2;
+}
 
-It was a close match, but you won! Before he gives you your victory money, he
-tells you about the \textbf{vermin \mappMobimon{} Tattarat} which infest the
-warehouse he works in. He says if you can figure out how the Tattarats
-\textbf{hide in the warehouse boxes}, you should be able to catch one of your
-very own!
+% http://oeis.org/A000041 number of partitions
+% http://oeis.org/A000009 number of odd/distinct partitions
 
-The boxes in the warehouse are always \textbf{stacked and numbered} in a certain
-way. Boxes are always pressed up against the \textbf{left wall} of the
-warehouse. The boxes have numbers painted on them according to \textbf{two
-  simple rules}.
-\begin{enumerate}
-\item \textbf{No} numbers are ever \textbf{reused} within a single pile of boxes.
-\item A pile of boxes has \textbf{standard numbering} if the numbers increase
-  horizontally going towards the right \textbf{and} the numbers also increase
-  vertically going up.
-\end{enumerate}
+While training your \mappMobimon{} on Interstate \(i\), you are approached
+by \textbf{Dockworker Dave}, who challenges you to a \mappMobimon{} battle!
+Of course you accepted... turning him down would be \textbf{rude},
+don't you think?
 
-So \textbf{this pile}
+It was a close match, but you won! As Dave gives you your victory money, he
+tells you about a group of \textbf{Tattarat} \mappMobimon{} that infest the
+warehouse he works in. These obnoxious critters like to
+\textbf{rearrange the boxes} in his warehouse, so Dave cuts you a deal.
+He'll let you catch a Tattarat for your team, but only if you help
+him reorganize his boxes.
+
+The boxes in the warehouse must be \textbf{stacked} so that
+each row of boxes is always pressed up against the \textbf{left wall} of the
+warehouse, and each row of boxes must have the \textbf{same or less boxes} than
+every lower row.
+
+Other than that, it's up to you. For example, there are \textbf{seven}
+different ways to stack \textbf{five} boxes.
+
 \begin{center}
-  \begin{tikzpicture}
-    \draw[thick] (0,0) -- (0, 4);
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(5,1)}
+
+    \draw[thick] (0,0) -- (0, 5);
     \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(4,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
 
-    \draw (0,0) grid (1,3);
-    \draw (1,0) grid (2,2);
-    \draw (2,0) grid (3,2);
-    \draw (3,0) grid (4,1);
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(3,1)}
+    \mappBoxRow{(0,1)}{(2,2)}
 
-    \node at (0.5, 0.5){1};
-    \node at (1.5, 0.5){2};
-    \node at (2.5, 0.5){3};
-    \node at (3.5, 0.5){4};
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(3,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
 
-    \node at (0.5, 1.5){5};
-    \node at (1.5, 1.5){6};
-    \node at (2.5, 1.5){7};
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(2,1)}
+    \mappBoxRow{(0,1)}{(2,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
 
-    \node at (0.5, 2.5){8};
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(2,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+    \mappBoxRow{(0,3)}{(1,4)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(1,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+    \mappBoxRow{(0,3)}{(1,4)}
+    \mappBoxRow{(0,4)}{(1,5)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
   \end{tikzpicture}
 \end{center}
-is \textbf{standard}.
 
-However \textbf{this pile}
-\begin{center}
-  \begin{tikzpicture}
-    \draw[thick] (0,0) -- (0,4);
-    \draw[thick] (0,0) -- (4,0);
+The dockworker notices your good work.
+``Hey, didya say you were aiming to become one of them \mappMobimon{}
+Champions? Maybe you're smart enough to solve this \textbf{puzzle} for me
+then.'' It seems that if you can count the following different combinations
+of stacked boxes, you'll be able to reveal a \textbf{hidden message} by
+converting the numbers to appropriate letters (A=1, B=2, and so on).
 
-    \draw (0,0) grid (1,1);
-    \draw (1,0) grid (2,2);
-    \draw (2,1) grid (3,3);
+\begin{multicols}{2}
+  \begin{itemize}
+    \item %M=13
+      The number of ways you can stack either \(2\) or \(6\) boxes.
+    \item %O=15
+      The number of ways you can stack \(12\) boxes, if every row must
+      contain an odd number.
+    \item %U=21
+      The number of ways you can stack \(8\) boxes, if every row must contain
+      less than eight.
+    \item %S=19
+      The number of ways you can stack up to \(5\) boxes. (An empty room
+      counts as one way...)
+    \item %E=5
+      The number of ways you can stack \(4\) boxes.
+  \end{itemize}
+\columnbreak
+  \begin{itemize}
+    \item %T=20
+      The number of ways you can stack \(8\) boxes, if every row must contain
+      less than seven.
+    \item %R=18
+      The number of ways you can stack \(13\) boxes, if every row must have
+      less boxes than the row below it.
+    \item %A=1
+      The number of ways you can stack \(42\) boxes, if you can only use one
+      row.
+    \item %P=16
+      The number of ways you can stack \(1\) or \(12\) boxes, if every row must
+      have a unique number of boxes.
+  \end{itemize}
+\end{multicols}
 
-    \node at (0.5, 0.5){1};
-    \node at (1.5, 0.5){3};
-    \node at (1.5, 1.5){2};
 
-    \node at (2.5, 1.5){5};
-    \node at (2.5, 2.5){4};
-  \end{tikzpicture}
-\end{center}
+%%SOLUTION%%%
+% MOUSETRAP %
+%%%%%%%%%%%%%
 
-is \textbf{not} standard, for three different reasons.
-\begin{itemize}
-\item The boxes aren't all pushed to left wall!
-\item The boxes aren't numbered in increasing order from bottom to top!
-\item Wait, boxes 4 and 5 are floating above the floor! How does that even work?
-  That's not right.
-\end{itemize}
+
+% Old unused text:
+
+% For example, this configuration looks solid.
+% \begin{center}
+%   \begin{tikzpicture}
+%     \fill[color=lightgray] (0,0) rectangle (4,1);
+%     \draw             (0,0) grid (4,1);
+%     \fill[color=lightgray] (0,1) rectangle (3,2);
+%     \draw             (0,1) grid (3,2);
+%     \fill[color=lightgray] (0,2) rectangle (1,3);
+%     \draw             (0,2) grid (1,3);
+%
+%     \draw[thick] (0,0) -- (0, 4);
+%     \draw[thick] (0,0) -- (5, 0);
+%   \end{tikzpicture}
+% \end{center}
+%
+% But this one isn't so great.
+% Not only are the boxes not all pushed to the left, but how are some of them
+% floating in the air like that anyway? That's just not right.
+%
+% \begin{center}
+%   \begin{tikzpicture}
+%     \fill[color=lightgray] (0,0) rectangle (2,1);
+%     \draw             (0,0) grid (2,1);
+%     \fill[color=lightgray] (1,1) rectangle (4,2);
+%     \draw             (1,1) grid (4,2);
+%     \fill[color=lightgray] (2,2) rectangle (3,3);
+%     \draw             (2,2) grid (3,3);
+%
+%     \draw[thick] (0,0) -- (0,4);
+%     \draw[thick] (0,0) -- (5,0);
+%   \end{tikzpicture}
+% \end{center}
+%
+
 
 
 
