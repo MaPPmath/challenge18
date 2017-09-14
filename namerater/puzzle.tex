@@ -1,9 +1,80 @@
 %!TEX root =../mapp-challenge-18-game-book.tex
 % ^ leave for LaTeXTools build functionality
 
-\phChapterWorksheet{The Name Rater}{Main Puzzle 3}
+\phChapterWorksheet{The Nickname Rater}{Main Puzzle 3}
+% https://en.wikipedia.org/wiki/MU_puzzle
 
-(based on https://en.wikipedia.org/wiki/MU\_puzzle)
+As your adventure continues, you find yourself in
+\textbf{Achromatopsia City}, home of the famous \textbf{Nickname Rater}.
+She explains that while Trainers often like to give their
+\mappMobimon{} cute nicknames, she's very particular about the rules
+for an \textbf{excellent} nickname. For clarity, you can assume
+that a \textbf{vowel} is any of the letters \texttt{A/E/I/O/U}, and a
+\textbf{consonant} is any other English letter.
+
+\begin{itemize}
+  \item Nicknames that contain \textbf{exactly one vowel} are always excellent.
+    \begin{itemize}
+      \item Examples: \texttt{A}, \texttt{I}, and \texttt{O} are
+            excellent nicknames.
+    \end{itemize}
+  \item \textbf{Adding a consonant to the end} of an excellent nickname
+        that \textbf{previously ended with a vowel}
+        creates a new excellent nickname.
+    \begin{itemize}
+      \item Examples: If \texttt{GOLE} is excellent, then
+            \texttt{GOLEN} and \texttt{GOLEK} are excellent also.
+    \end{itemize}
+  \item \textbf{Doubling} an excellent nickname creates a new excellent
+        nickname.
+    \begin{itemize}
+      \item Example: If \texttt{PIKA} is excellent, then
+            \texttt{PIKAPIKA} is excellent also.
+    \end{itemize}
+  \item \textbf{Replacing three consecutive vowels} in
+        an excellent nickname \textbf{with a consonant}
+        creates a new excellent nickname.
+    \begin{itemize}
+      \item Example: If \texttt{QUEUEBONE} is excellent, then
+        \texttt{QTEBONE} and \texttt{QURBONE} are excellent also.
+    \end{itemize}
+  \item \textbf{Removing any double consonant} from an excellent nickname
+        creates a new excellent nickname.
+    \begin{itemize}
+      \item Example: If \texttt{DOUGTRIO} is excellent, then
+        \texttt{DOUGIO} and \texttt{DOURIO} are excellent also.
+    \end{itemize}
+\end{itemize}
+
+The Nickname Rater, not one to shy away from a good \textbf{puzzle},
+offers you the chance to rate the following nicknames yourself.
+You'll know when you've done it correctly, because
+if you \textbf{use the first letters of the excellent
+nicknames below}, you will spell \textbf{another good word for a nickname}
+(even if it's not particularly \textbf{excellent} itself).
+
+% note: excellent nicknames cannot have 0(mod3) vowels
+
+\begin{multicols}{3}
+  \begin{itemize}
+    % \item \texttt{PIDGEON} %non-excellent (3 vowels)
+    \item \texttt{MANKAY} %4As->BA->B->BABBAB           %M
+    \item \texttt{ULTRAMON} %non-excellent (3 vowels)
+    \item \texttt{OMASTARE} %16As->ABABBABA             %O
+    \item \texttt{VOLTEON} %non-excellent (3 vowels)
+    \item \texttt{GENGASKHAN} %non-excellent (3 vowels)
+    \item \texttt{EEVOL} %non-excellent (3 vowels)
+    \item \texttt{NOHTYP} %16As->BABBBB                 %N
+    \item \texttt{BLASTMOIST} %non-excellent (3 vowels)
+    \item \texttt{ICHU} %8As->ABBA                      %I
+    \item \texttt{KADABERA} %4As->BA->BABABABA          %K
+    \item \texttt{AERODYCTL} %non-excellent (3 vowels)
+    \item \texttt{PARACENT} %non-excellent (3 vowels)
+    \item \texttt{EARSEA} %16As->AABBAABB->AABBAA       %E
+    \item \texttt{DRAGONAT} %non-excellent (3 vowels)
+    \item \texttt{RAGMAR} %4As->BA->BAB->BABBAB         %R
+  \end{itemize}
+\end{multicols}
 
 % Include below for aucTeX integration
 %%% Local Variables:
