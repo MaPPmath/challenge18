@@ -31,6 +31,14 @@
 \newcommand{\mappMobimon}{Mob\'imon}
 \newcommand{\mappMobidex}{Mob\'idex}
 
+\newcommand{\blindCrissCrossEntry}[2]{
+  \draw[step=1,dotted] #1 grid #2;
+  \draw[very thick] #1 rectangle #2
+}
+\newcommand{\blindCrissCrossPip}[2]{
+  \draw[fill=black] (#1.5,#2.5) circle (0.3)
+}
+
 % \phMarkDraft
 
 \phSetSquareLogo{assets/mapp-square.pdf}
@@ -89,6 +97,10 @@
 
 \phPart{Metapuzzle}
 \input{tournament/puzzle.tex}
+
+\phPart{Solutions}
+\phChapter{Solutions}
+\input{overview/solutions.tex}
 
 \end{document}
 
