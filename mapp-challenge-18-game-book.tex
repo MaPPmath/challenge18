@@ -18,6 +18,11 @@
 \usepackage{alphalph}
 \usepackage{contour}
 
+\usepackage{pigpen}
+
+
+\usepackage[puttinydots]{braille}
+
 % Contest name macros
 \newcommand{\phEventName}{MaPP Challenge '18 }
 \newcommand{\phEventAbbr}{Challenge18 }
@@ -39,7 +44,10 @@
   \draw[fill=black] (#1.5,#2.5) circle (0.3)
 }
 
-% \phMarkDraft
+\newcommand{\morseDit}{\(\cdot\)}
+\newcommand{\morseDah}{-}
+
+\phMarkDraft
 
 \phSetSquareLogo{assets/mapp-square.pdf}
 \phSetBannerLogo{assets/mapp-banner.pdf}
@@ -55,17 +63,14 @@
 
 \phPart{Game Overview}
 
-\phChapter{Credits}
-\input{overview/credits.tex}
+\phChapter{Rules}
+\input{overview/rules.tex}
+
+\phChapter{Code Sheet}
+\input{overview/codes.tex}
 
 % \phChapter{Print and Supply List}
 % \input{overview/printList.tex}
-
-% \phChapter{Rules}
-% \input{overview/rules.tex}
-
-% \phChapter{Code Sheet}
-% \input{overview/codes.tex}
 
 
 % \phChapter{Scoresheet}
@@ -73,8 +78,9 @@
 
 
 
-% %opening puzzle
-% \phPart{Opening Puzzle}
+%opening puzzle
+\phPart{Opening Puzzle}
+TODO
 
 % %main puzzles
 \phPart{Main Puzzles}
@@ -98,9 +104,12 @@
 \phPart{Metapuzzle}
 \input{tournament/puzzle.tex}
 
-\phPart{Solutions}
+\phPart{Solutions and Credits}
 \phChapter{Solutions}
 \input{overview/solutions.tex}
+
+\phChapter{Credits}
+\input{overview/credits.tex}
 
 \end{document}
 
