@@ -5,47 +5,38 @@
 
 The \textbf{Expedition Zone}, found off the side of
 Road \(6+i^2\), is a great place to catch some rare \mappMobimon{}!
-
-Theres a catch, though: your path through the Expedition Zone has to follow
-certain \textbf{expedition pieces.} Here are the rules:
-\begin{enumerate}
-\item Two expedition pieces are adjacent if any of their \textbf{corners} are
-  touching, but \textbf{no other parts touch}.
-  \begin{center}
-    These pieces are adjacent.
-
-    \begin{tikzpicture}
-      \draw[fill=black!20] (0,0) grid (1,1) rectangle (0,0);
-      \draw[fill=black!60] (1,1) grid (2,3) rectangle (1,1);
-    \end{tikzpicture}
-  \end{center}
-
-  \begin{center}
-    These pieces are not.
-
-    \begin{tikzpicture}
-      \draw[fill=black!20] (0,0) grid (1,1) rectangle (0,0);
-      \draw[fill=black!60] (1,0) grid (2,2) rectangle (1,0);
-    \end{tikzpicture}
-  \end{center}
-
-\item You must have a expedition piece in the \textbf{lower left corner}.
-\item You may not have any breaks in your path. It must be an \textbf{unbroken
-    collection} of adjacent pieces.
-\end{enumerate}
-
-You may notice several Mobimon inhabiting the Expedition Zone! These Mobimon are
-represented by \textbf{numbers,} and each number is its \textbf{strength.} To
-catch a Mobimon, you must
+You've been given \textbf{eleven Mob\'i Nets} (see the provided sheet)
+to set up in the Zone. There are a few rules for setting these up, however.
 
 \begin{enumerate}
-\item make sure your path goes over that Mobimon, and
-\item a piece on that Mobimon must have \textbf{more squares than that Mobimon's
-  strength}.
+\item Your first net must cover the \textbf{upper left corner} of the Zone.
+\item All subsequent nets \textbf{must be connected at a corner}
+      to a previous net, as in this example.
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw[fill=black!10] (0,0) grid (1,1) rectangle (0,0);
+    \draw[fill=black!30] (1,1) grid (2,3) rectangle (1,1);
+  \end{tikzpicture}
+\end{center}
+
+\item Nets \textbf{cannot connect along an edge} to other nets,
+      as in this example.
+
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw[fill=black!10] (0,0) grid (1,1) rectangle (0,0);
+    \draw[fill=black!30] (1,0) grid (2,2) rectangle (1,0);
+  \end{tikzpicture}
+\end{center}
 \end{enumerate}
 
-Your score is the \textbf{sum of the strengths of the Mobimon you catch}. The
-teams with the two highest scores get \textbf{Victory Points}! Good luck!
+You've been provided with an \textbf{Expedition Zone Map}. Each square
+on this map that contains a number represents a \mappMobimon{} with
+that much strength.
+\textbf{Maximize the sum of the numbers covered by your Nets},
+and you'll prove you have what it takes to become a \mappMobimon{} Champion!
 
 \phWorksheet{Expedition Zone Map}
 
@@ -162,9 +153,27 @@ teams with the two highest scores get \textbf{Victory Points}! Good luck!
     \node at (115mm, 75mm){7};
     \node at (115mm, 105mm){3};
   \end{tikzpicture}
+
+  \vfill
+
+  \begin{tikzpicture}
+    \node at (0,0) {\Large 500};
+    \node at (1,0) {\Large -};
+    \draw (2,-0.5) rectangle (6,0.5);
+    \node[anchor=north] at (4,-0.5) {\footnotesize Sum of numbers not in Nets};
+    \node at (7,0) {\Large =};
+    \draw (8,-0.5) rectangle (12,0.5);
+    \node[anchor=north] at (10,-0.5) {\footnotesize Sum of numbers in Nets};
+    \node[anchor=south] at (10,0.5) {Score:};
+  \end{tikzpicture}
+
+  \vfill
 \end{center}
 
-\phWorksheet{Path Pieces}
+\phWorksheet{Mob\'i Nets}
+
+Cut out these figures and tape them to the \textbf{Expedition Zone Map},
+following the rules outlined in the \textbf{Bonus Puzzle}.
 
 \begin{center}
   \begin{tikzpicture}
