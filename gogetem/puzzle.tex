@@ -30,13 +30,18 @@ or vertically on the board, but the right figure represents
 three separate groups of stones.
 
 To defeat a group of stones, it seems that you are required to
-\textbf{completely surround the group with your own stones}, as illustrated
-in the old man's next examples.
+\textbf{completely surround the group with your own stones}. As illustrated
+in the old man's next examples, the x's mark where white stones would need to be
+played to capture all the black stones.
 
 \begin{center}
   \includegraphics{gogetem/assets/explanation3-crop}
   \includegraphics{gogetem/assets/explanation4-crop}
 \end{center}
+
+Normally you \textbf{can't play a stone if it doesn't have some empty space next
+to it.} The one exception is that you can play a stone if that play
+\textbf{creates empty space by capturing your opponent's stones.} 
 
 You haven't really been listening, but then the old man mentions that he
 might be able to tell you where to \textbf{find some interesting Plant-type
@@ -51,6 +56,10 @@ conversation!).
 
 \phWorksheet{Old-School \mappMobimon{} Battle Grids}
 
+% To make the cropped boards,
+% Easy way (macOS/*nix/cygwin): open a terminal, cd into assets and type "make"
+% Hard way: Build all of boards#.tex, then in a terminal run pdfcrop on all of
+%           the resulting boards#.pdf files.
 \begin{center}
   \contournumber{64}
   \resizebox{6in}{!}{
@@ -99,7 +108,7 @@ conversation!).
     (0,0){\includegraphics[scale=1.5]{gogetem/assets/boards3-crop}};
     % left board coordinate system
     \foreach \x in {0,...,12}
-    \node at (\x * 0.58, 7.3){\contour{black}{\AlphAlph{\x + 14}}};
+    \node at (0.35 + \x * 0.58, 7.6){\contour{black}{\AlphAlph{\x + 14}}};
     \foreach \x in {0,...,12}
     \node at (-0.25, \x * 0.58){\contour{black}{\textcolor{white}{\AlphAlph{13 -
           \x}}}};
