@@ -44,9 +44,9 @@ that means you'll have to work your way up from the bottom!
   \item Dojo Master 2 (Rank 2) will use \underline{\hspace{6em}}.
   \item Dojo Master 3 (Rank 3) will use \underline{\hspace{6em}}.
   \item Dojo Master 4 (Rank 4) will use \underline{\hspace{6em}}.
-  \item Gary (Rank 5) will use TODO.
-  \item Misty (Rank 6) will use TODO.
-  \item Ash (Rank 7) will use TODO.
+  \item Gary (Rank 5) will use Glowmage.
+  \item Misty (Rank 6) will use Squidiny.
+  \item Ash (Rank 7) will use Steinape.
   \item You (Rank 8) will use \underline{\hspace{6em}}.
 \end{itemize}
 \begin{itemize}
@@ -82,7 +82,7 @@ of the tournament.
 
 \phWorksheet{\mappMobimon{} Battling Overview}
 
-The \(PWR\) of a \mappMobimon{} move is equal to the
+The \(PWR\) of a \mappMobimon{} move is based on the
 \mappMobimon{}'s \(LV\), but modified by a couple rules.
 
 Each \mappMobimon{} has one or two of these types: Ordinary, Flame, Aqua, Plant,
@@ -93,7 +93,7 @@ the \mappMobimon{} type does not affect the \(PWR\) of the move at all.
 
 Secondly, the type(s) of the opponent \mappMobimon{} also affect the move's
 \(PWR\), according to the following chart.
-For each of the opponent's type(s), take the cell found in the
+For each of the opponent's types, consider the cell found in the
 intersection of that column and the row given by the move type. If the cell
 isn't empty, multiply the move's \(PWR\) by that number.
 
@@ -112,9 +112,9 @@ isn't empty, multiply the move's \(PWR\) by that number.
 
 For example, a Flame-type move used against a Plant/Magic-type
 \mappMobimon{} is modified by a factor of \(2\), but it
-would be modified by \(\frac{1}{4}\) if used against a Flame/Aqua-type
-\mappMobimon{}. (If the user has the Flame type, then the modifers would
-actually be \(3\) and \(\frac{3}{8}\), respectively.)
+would be modified by \(\frac{1}{4}\) instead if used against a Flame/Aqua-type
+\mappMobimon{}. (If the user has the Flame type, then the total modifers would
+be \(3\) and \(\frac{3}{8}\), respectively.)
 
 Each \mappMobimon{} knows two different moves, so it's up to the
 trainer to decide which move would have greater \(PWR\) against their
@@ -123,7 +123,8 @@ their opponent wins the battle and moves on in the tournament, and the
 loser is knocked out.
 
 During a tournament, each trainer must use the same \mappMobimon{} for all
-battles. At the conclusion of the tournament, the trainers and their
+battles, and each \mappMobimon{} cannot be used by more than one trainer.
+At the conclusion of the tournament, the trainers and their
 \mappMobimon{} are ranked according
 to how many battles were won: 1st place for 3 wins, 2nd place for 2 wins,
 3rd-4th place for 1 win, and 5th-8th place for no wins. The rankings each
@@ -132,8 +133,36 @@ places.
 
 \phWorksheet{\mappMobimon{} List}
 
-TODO
-
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|p{2in}|}\hline
+  Name & Type(s) & \(LV\) & 1st Move & 2nd Move & Mob\'idex Description \\\hline\hline
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Ariafire & Flame & 50 & Flame & Lightning &
+    Works well with other firey \mappMobimon{}. \\\hline
+  Burnezam & Flame/Magic & 49 & Flame & Magic &
+    Known for its caution and level-headedness. \\\hline
+  Dawnoduh & Ordinary/Undead & 56 & Ordinary & Flame &
+    Your run-of-the-mill zombie. \\\hline
+  Emaphant & Ordinary & 52 & Ordinary & Magic &
+    Tramples over the competition. \\\hline
+  Finfanta & Magic & 54 & Magic & Flame &
+    Moody, it creates clouds of strife. \\\hline
+  Glowmage & Magic/Lightning & 55 & Magic & Undead &
+    A shining example of magical prowess. \\\hline
+  Planktin & Aqua/Plant & 51 & Plant & Ordinary &
+    Well, it grows on you at least. \\\hline
+  Scorchar & Flame/Lightning & 58 & Flame & Undead &
+    It can run a marathon in under 38 minutes. \\\hline
+  Steinape & Undead/Lightning & 47 & Lightning & Ordinary &
+    It's alive with passion for battling. \\\hline
+  Squidiny & Aqua & 57 & Aqua & Ordinary &
+    A lot of fun to go surfing with. \\\hline
+  Thundora & Lightning & 53 & Lightning & Plant &
+    The most profecient of its kind. \\\hline
+  Zomtreed & Plant/Undead & 43 & Undead & Magic &
+    This extreme \mappMobimon{} pushes it to the limit. \\\hline
+\end{tabular}
+\end{center}
 
 
 % Include below for aucTeX integration
