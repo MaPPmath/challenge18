@@ -1,11 +1,11 @@
 %!TEX root =../mapp-challenge-18-game-book.tex
 % ^ leave for LaTeXTools build functionality
 
-\phSection{Opening Puzzle - TODO}
+\phSection{Opening Puzzle - The Kantor Region}
 
 TODO
 
-\phSection{Main Puzzle 1 - Go Get 'Em}
+\phSection{Main Puzzle 1 - Go For It}
 
 The correct stones are laid as follows.
 
@@ -111,7 +111,7 @@ The solution \texttt{MONIKER} is another word for nickname
         \omega\cdot 9+2
 \end{align*}
 
-This yields the solution \texttt{24007042951=MIRRORIMAGE}.
+Thus \texttt{24007042951} yields the solution \texttt{MIRRORIMAGE}.
 
 \phSection{Cryptic Puzzle 1 - Civic Duty}
 
@@ -170,10 +170,10 @@ Each ``cross product'' represents the letter where the two words cross in
 the grid, yielding the following.
 
 \begin{center}
-Lightning \(\times\) Plant = T\hfill
-Undead \(\times\) Flame = E\hfill
-Aqua \(\times\) Ordinary = A\hfill
-Flame \(\times\) Magic = M
+Lightning \(\times\) Plant = \texttt{T}\hfill
+Undead \(\times\) Flame = \texttt{E}\hfill
+Aqua \(\times\) Ordinary = \texttt{A}\hfill
+Flame \(\times\) Magic = \texttt{M}
 \end{center}
 
 The solution is \texttt{TEAM}.
@@ -182,10 +182,12 @@ The solution is \texttt{TEAM}.
 
 The blind/sight clues suggest to find a way to criss-cross the given
 words in the grid using Braille. There is exactly one way to do this,
-involving various orientations for each word.
+involving various orientations for each word. (To get started, note that
+there is only one option for \texttt{RED}, and if you choose the wrong
+orientation then \texttt{CRYSTAL} cannot fit.)
 
 \begin{center}
-\resizebox{3in}{!}{
+\resizebox{2.5in}{!}{
 \begin{tikzpicture}[x=0.5cm,y=0.5cm]
   \fill[color=lightgray] (8,14) rectangle (10,17);
   \fill[color=lightgray] (0,10) rectangle (3,12);
@@ -387,9 +389,45 @@ The solution is \texttt{VERYBEST}.
 
 \phSection{Metapuzzle - Route to Victory}
 
+The four Dojo Master \mappMobimon{} are determined by comparing the
+Cryptic Puzzle solutions to the \mappMobidex{} descriptions.
 
+\begin{itemize}
+  \item DM1: \texttt{PRUDENCE} \(\Rightarrow\)
+        ``Known for its caution and level-headedness.'' \(\Rightarrow\)
+        Burnezam
+  \item DM2: \texttt{TEAM} \(\Rightarrow\)
+        ``Works well with other firey \mappMobimon{}.'' \(\Rightarrow\)
+        Ariafire
+  \item DM3: \texttt{ULTRA} \(\Rightarrow\)
+        ``This extreme \mappMobimon{} pushes it to the limit.'' \(\Rightarrow\)
+        Zomtreed
+  \item DM4: \texttt{VERYBEST} \(\Rightarrow\)
+        ``Incredibly profecient, like no one ever was.'' \(\Rightarrow\)
+        Thundora
+\end{itemize}
 
-The solution is \texttt{ELITEONE}.
+The tournament may then be calculuated, assuming the player wins their battles.
+To do so, the player's \mappMobimon{} must defeat Burnezam, Zomtreed, and
+Glowmage. It follows that the only possible choice to win the tournament is
+Emaphant. This results in the following rankings.
+
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \texttt{Emaphant} (You, originally ranked 8)
+  \item \texttt{gLowmage} (Gary, originally ranked 5)
+  \item \texttt{arIafire} (DM2, originally ranked 2)
+  \item \texttt{zomTreed} (DM3, originally ranked 3)
+  \item \texttt{burnEzam} (DM1, originally ranked 1)
+  \item \texttt{thundOra} (DM4, originally ranked 4)
+  \item \texttt{squidiNy} (Misty, originally ranked 6)
+  \item \texttt{steinapE} (Ash, originally ranked 7)
+\end{enumerate}
+\end{multicols}
+
+The solution \texttt{ELITEONE} may be found by reading down the diagonal of the
+ranked \mappMobimon{}; that is, the first letter from first place, the second
+letter from second place, etc.
 
 \phSection{Hidden Puzzle}
 
@@ -411,8 +449,11 @@ and Cryptic Puzzles 1-4 approximate to an integer between 1 and 26.
 \end{multicols}
 
 \texttt{MORSEEYES} is not the solution, but a hint on how to find it.
-TODO: add special accents to Mobi prefixes throughout some part of the
-document available to players, spelling a solution in Morse code.
+In Main Puzzles 1-4, the Bonus Puzzle, and Cryptic Puzzles 1-4, occasionally
+the accented \texttt{\'i} in \mappMobimon{} is replaced with
+\texttt{\`i} or \texttt{\^i}. Interpretting \texttt{\`i} as ``dit'' and
+\texttt{\^i} as ``dah'', these accented characters decode to the solution
+\texttt{SECRETLAB} (the location of the Legenday \mappMobimon{}).
 
 %%% Local Variables:
 %%% mode: latex
