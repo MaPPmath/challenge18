@@ -14,45 +14,41 @@ For clarity, you can assume
 that a \textbf{vowel} is any of the letters \texttt{A/E/I/O/U}, and a
 \textbf{consonant} is any other English letter.
 
+\begin{multicols}{2}
 \begin{itemize}
-  \item Nicknames that contain \textbf{exactly one vowel}, that is,
-        \texttt{A}, \texttt{E}, \texttt{I}, \texttt{O}, and
-        \texttt{U}, are excellent.
-  \item \textbf{Adding a consonant to the end} of an excellent nickname
-        that \textbf{previously ended with a vowel}
+  \item \textbf{Rule 0:}
+        \texttt{A} is an excellent nickname.
+  \item \textbf{Rule 1:}
+        Adding a consonant to the end of an excellent nickname ending with
+        a vowel creates a new excellent nickname.
+  \item \textbf{Rule 2:}
+        Doubling an excellent nickname creates a new excellent nickname.
+  \item \textbf{Rule 3:}
+        Replacing three consecutive vowels in an excellent nickname with
+        a consonant creates a new excellent nickname.
+  \item \textbf{Rule 4:}
+        Removing two consecutive consonants from an excellent nickname
         creates a new excellent nickname.
-    \begin{itemize}
-      \item Examples: If \texttt{GOLE} is excellent, then
-            \texttt{GOLEN} and \texttt{GOLEK} are excellent also.
-    \end{itemize}
-  \item \textbf{Doubling} an excellent nickname creates a new excellent
-        nickname.
-    \begin{itemize}
-      \item Example: If \texttt{PIKA} is excellent, then
-            \texttt{PIKAPIKA} is excellent also.
-    \end{itemize}
-  \item \textbf{Replacing three consecutive vowels} in
-        an excellent nickname \textbf{with a consonant}
+  \item \textbf{Rule 5:}
+        Exchanging the consonants in an excellent nickname with other
+        consonants creates a new excellent nickname. Similarly,
+        exchanging the vowels in an excellent nickname with other vowels
         creates a new excellent nickname.
-    \begin{itemize}
-      \item Example: If \texttt{QUEUEBONE} is excellent, then
-        \texttt{QTEBONE} and \texttt{QURBONE} are excellent also.
-    \end{itemize}
-  \item \textbf{Removing any double consonant} from an excellent nickname
-        creates a new excellent nickname.
-    \begin{itemize}
-      \item Example: If \texttt{DOUGTRIO} is excellent, then
-        \texttt{DOUGIO} and \texttt{DOURIO} are excellent also.
-    \end{itemize}
-  \item Any nickname that cannot be created by using the above rules
-        is not excellent.
+  \item Nicknames that cannot be created using these rules are not
+        excellent.
 \end{itemize}
+\end{multicols}
+
+For example, \texttt{A} (Rule 0), \texttt{AA} (Rule 2), \texttt{AAAA} (Rule 2),
+\texttt{SA} (Rule 3), \texttt{SAM} (Rule 1), \texttt{SAMSAM} (Rule 2),
+\texttt{SAAM} (Rule 4), and \texttt{NEAT} (Rule 5) are all excellent nicknames.
 
 The Nickname Rater, not one to shy away from a good \textbf{puzzle}, offers you
 the chance to rate the following \mappMobidot{} nicknames yourself.  You'll know
-when you've done it correctly, because if you \textbf{use the first letters of
-  the excellent nicknames below}, you will spell \textbf{another good word for a
-  nickname} (even if it's not particularly \textbf{excellent} itself).
+when you've done it correctly, because if you \textbf{take the first letters of
+the excellent nicknames below} in order, you will spell a good
+\textbf{seven-letter word for a nickname}
+(even if it's not particularly \textbf{excellent} itself).
 
 % note: excellent nicknames cannot have 0(mod3) vowels
 
