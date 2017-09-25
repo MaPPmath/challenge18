@@ -20,7 +20,7 @@ not bothering to hide his frustration that you aren't showing any
 interest in this bit of history, insists on showing you the following example.
 
 \begin{center}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
+  \begin{tikzpicture}[x=0.2in,y=0.2in]
     \draw[step=1] (0,0) grid (5,5);
     \draw[thick] (0,0) rectangle (5,5);
     \draw[fill=white] (0,1) circle (0.4);
@@ -54,7 +54,7 @@ opposite-colored stones} vertically and horizontally, as in the following
 example.
 
 \begin{center}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
+  \begin{tikzpicture}[x=0.2in,y=0.2in]
     \draw[step=1] (0,0) grid (5,5);
     \draw[thick] (0,0) rectangle (5,5);
     \draw[fill=white] (0,1) circle (0.4);
@@ -104,13 +104,12 @@ conversation!
   \begin{tikzpicture}[x=0.2in,y=0.2in]
     \draw[step=1] (0,0) grid (5,5);
     \draw[thick] (0,0) rectangle (5,5);
-    \draw[fill=white] (1,2) circle (0.4);
-    \draw[fill=white] (2,1) circle (0.4);
-    \draw[fill=white] (2,3) circle (0.4);
-    \draw[fill=white] (3,2) circle (0.4);
-    \draw[fill=black] (3,1) circle (0.4);
-    \draw[fill=black] (3,3) circle (0.4);
-    \draw[fill=black] (4,2) circle (0.4);
+    \draw[fill=black] (2,1) circle (0.4);
+    \draw[fill=black] (2,3) circle (0.4);
+    \draw[fill=black] (3,2) circle (0.4);
+    \draw[fill=white] (3,1) circle (0.4);
+    \draw[fill=white] (3,3) circle (0.4);
+    \draw[fill=white] (4,2) circle (0.4);
     \node at (-1,0) {\textcolor{white}{\contour{black}{B}}};
     \node at (-1,1) {\textcolor{white}{\contour{black}{G}}};
     \node at (-1,2) {\textcolor{white}{\contour{black}{T}}};
@@ -198,6 +197,7 @@ conversation!
     \draw[fill=white] (5,5) circle (0.4);
     \draw[fill=black] (0,3) circle (0.4);
     \draw[fill=black] (0,4) circle (0.4);
+    \draw[fill=black] (0,5) circle (0.4);
     \draw[fill=black] (2,5) circle (0.4);
     \draw[fill=black] (3,4) circle (0.4);
     \draw[fill=black] (3,5) circle (0.4);
@@ -284,6 +284,7 @@ conversation!
     \draw[fill=white] (3,3) circle (0.4);
     \draw[fill=white] (4,2) circle (0.4);
     \draw[fill=white] (5,3) circle (0.4);
+    \draw[fill=white] (0,1) circle (0.4);
     \draw[fill=white] (6,1) circle (0.4);
     \draw[fill=white] (7,1) circle (0.4);
     \node at (-1,0) {\textcolor{white}{\contour{black}{L}}};
@@ -342,80 +343,84 @@ conversation!
   \begin{tikzpicture}[x=0.2in,y=0.2in]
     \draw[step=1] (0,0) grid (9,9);
     \draw[thick] (0,0) rectangle (9,9);
-    \draw[fill=black] (0,2) circle (0.4);
-    \foreach \x in {2,3,4} {
-      \draw[fill=black] (2,\x) circle (0.4);
+    \draw[fill=black] (0,8) circle (0.4);
+    \draw[fill=black] (7,7) circle (0.4);
+    \foreach \x in {3,4,5,6,8,9} {
+      \draw[fill=black] (\x,6) circle (0.4);
     }
-    \foreach \x in {2,4,5} {
-      \draw[fill=black] (3,\x) circle (0.4);
+    \foreach \x in {1,2,8} {
+      \draw[fill=black] (\x,5) circle (0.4);
     }
-    \draw[fill=black] (4,1) circle (0.4);
-    \foreach \x in {0,1,2,4} {
-      \draw[fill=black] (5,\x) circle (0.4);
+    \foreach \x in {4,6,7} {
+      \draw[fill=black] (\x,4) circle (0.4);
     }
-    \foreach \x in {3,4} {
-      \draw[fill=black] (6,\x) circle (0.4);
+    \foreach \x in {5,6} {
+      \draw[fill=black] (\x,3) circle (0.4);
     }
-    \foreach \x in {1,4} {
-      \draw[fill=white] (1,\x) circle (0.4);
+    \draw[fill=black] (6,2) circle (0.4);
+    \draw[fill=black] (7,1) circle (0.4);
+    \foreach \x in {0,1,2,3} {
+      \draw[fill=white] (\x,7) circle (0.4);
     }
-    \foreach \x in {1,5,6,7} {
-      \draw[fill=white] (2,\x) circle (0.4);
+    \foreach \x in {2,7} {
+      \draw[fill=white] (\x,6) circle (0.4);
     }
-    \draw[fill=white] (3,3) circle (0.4);
-    \draw[fill=white] (4,2) circle (0.4);
-    \draw[fill=white] (5,3) circle (0.4);
-    \draw[fill=white] (6,1) circle (0.4);
-    \draw[fill=white] (7,1) circle (0.4);
-    \node at (-1,0) {\textcolor{white}{\contour{black}{L}}};
-    \node at (-1,1) {\textcolor{white}{\contour{black}{K}}};
-    \node at (-1,2) {\textcolor{white}{\contour{black}{M}}};
+    \foreach \x in {3,4,5,6,7} {
+      \draw[fill=white] (\x,5) circle (0.4);
+    }
+    \foreach \x in {1,5} {
+      \draw[fill=white] (\x,4) circle (0.4);
+    }
+    \draw[fill=white] (7,2) circle (0.4);
+    \node at (-1,0) {\textcolor{white}{\contour{black}{Y}}};
+    \node at (-1,1) {\textcolor{white}{\contour{black}{H}}};
+    \node at (-1,2) {\textcolor{white}{\contour{black}{U}}};
     \node at (-1,3) {\textcolor{white}{\contour{black}{J}}};
-    \node at (-1,4) {\textcolor{white}{\contour{black}{N}}};
-    \node at (-1,5) {\textcolor{white}{\contour{black}{H}}};
-    \node at (-1,6) {\textcolor{white}{\contour{black}{B}}};
-    \node at (-1,7) {\textcolor{white}{\contour{black}{G}}};
-    \node at (-1,8) {\textcolor{white}{\contour{black}{G}}};
-    \node at (-1,9) {\textcolor{white}{\contour{black}{G}}};
-    \node at (0,10) {I};
-    \node at (1,10) {U};
-    \node at (2,10) {Y};
-    \node at (3,10) {T};
-    \node at (4,10) {R};
-    \node at (5,10) {E};
-    \node at (6,10) {W};
-    \node at (7,10) {Q};
-    \node at (8,10) {Q};
-    \node at (9,10) {Q};
+    \node at (-1,4) {\textcolor{white}{\contour{black}{I}}};
+    \node at (-1,5) {\textcolor{white}{\contour{black}{K}}};
+    \node at (-1,6) {\textcolor{white}{\contour{black}{O}}};
+    \node at (-1,7) {\textcolor{white}{\contour{black}{L}}};
+    \node at (-1,8) {\textcolor{white}{\contour{black}{P}}};
+    \node at (-1,9) {\textcolor{white}{\contour{black}{M}}};
+    \node at (0,10) {Q};
+    \node at (1,10) {A};
+    \node at (2,10) {W};
+    \node at (3,10) {S};
+    \node at (4,10) {E};
+    \node at (5,10) {D};
+    \node at (6,10) {R};
+    \node at (7,10) {F};
+    \node at (8,10) {T};
+    \node at (9,10) {G};
   \end{tikzpicture}
   \begin{tikzpicture}[x=0.2in,y=0.2in]
     \draw[step=1] (0,0) grid (9,9);
     \draw[thick] (0,0) rectangle (9,9);
-    \draw[fill=black] (0,2) circle (0.4);
-    \foreach \x in {2,3,4} {
-      \draw[fill=black] (2,\x) circle (0.4);
+    \foreach \x in {4,5,6} {
+      \draw[fill=black] (\x,1) circle (0.4);
     }
-    \foreach \x in {2,4,5} {
-      \draw[fill=black] (3,\x) circle (0.4);
+    \foreach \x in {2,3,4,6,7,8} {
+      \draw[fill=black] (\x,2) circle (0.4);
     }
-    \draw[fill=black] (4,1) circle (0.4);
-    \foreach \x in {0,1,2,4} {
-      \draw[fill=black] (5,\x) circle (0.4);
+    \foreach \x in {1,2,8,9} {
+      \draw[fill=black] (\x,3) circle (0.4);
+    }
+    \foreach \x in {1,9} {
+      \draw[fill=black] (\x,4) circle (0.4);
+    }
+    \foreach \x in {3,7} {
+      \draw[fill=black] (\x,5) circle (0.4);
+    }
+    \foreach \x in {2,4,6,7,8} {
+      \draw[fill=black] (\x,6) circle (0.4);
+      \draw[fill=black] (\x,7) circle (0.4);
+    }
+    \foreach \x in {3,4,6,7} {
+      \draw[fill=white] (3,\x) circle (0.4);
     }
     \foreach \x in {3,4} {
-      \draw[fill=black] (6,\x) circle (0.4);
+      \draw[fill=white] (7,\x) circle (0.4);
     }
-    \foreach \x in {1,4} {
-      \draw[fill=white] (1,\x) circle (0.4);
-    }
-    \foreach \x in {1,5,6,7} {
-      \draw[fill=white] (2,\x) circle (0.4);
-    }
-    \draw[fill=white] (3,3) circle (0.4);
-    \draw[fill=white] (4,2) circle (0.4);
-    \draw[fill=white] (5,3) circle (0.4);
-    \draw[fill=white] (6,1) circle (0.4);
-    \draw[fill=white] (7,1) circle (0.4);
     \node at (-1,0) {\textcolor{white}{\contour{black}{L}}};
     \node at (-1,1) {\textcolor{white}{\contour{black}{K}}};
     \node at (-1,2) {\textcolor{white}{\contour{black}{M}}};
@@ -424,8 +429,8 @@ conversation!
     \node at (-1,5) {\textcolor{white}{\contour{black}{H}}};
     \node at (-1,6) {\textcolor{white}{\contour{black}{B}}};
     \node at (-1,7) {\textcolor{white}{\contour{black}{G}}};
-    \node at (-1,8) {\textcolor{white}{\contour{black}{G}}};
-    \node at (-1,9) {\textcolor{white}{\contour{black}{G}}};
+    \node at (-1,8) {\textcolor{white}{\contour{black}{F}}};
+    \node at (-1,9) {\textcolor{white}{\contour{black}{V}}};
     \node at (0,10) {I};
     \node at (1,10) {U};
     \node at (2,10) {Y};
@@ -434,8 +439,8 @@ conversation!
     \node at (5,10) {E};
     \node at (6,10) {W};
     \node at (7,10) {Q};
-    \node at (8,10) {Q};
-    \node at (9,10) {Q};
+    \node at (8,10) {A};
+    \node at (9,10) {Z};
   \end{tikzpicture}
 \end{center}
 
