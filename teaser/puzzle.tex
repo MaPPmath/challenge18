@@ -12,7 +12,7 @@ you deal with this conundrum...
 
 In a previous \mappMobimon{} tournament, six trainers competed and were
 ranked 1st through 6th: Ash, Brock, Cynthia, Drayden, Erika, and Flannery.
-You have been told the following facts about these results:
+You have been told the following statements about these results:
 
 \begin{multicols}{3}\footnotesize
   \begin{center}
@@ -50,12 +50,79 @@ You have been told the following facts about these results:
 Unfortunately, there's no way all of those claims are \textbf{truthful}.
 By inspecting the \textbf{Trainer Badge} above each statement, you can uncover
 the \textbf{lies} by deciding if the cord depicted in its design would
-\textbf{tighten into a knot} if pulled taut. By blacking out the incorrect
+\textbf{tighten into a knot} if pulled taut; if the cord wouldn't knot when
+pulled, then the statement is true. By blacking out the incorrect
 results below, you'll reveal the answer to this riddle: \textit{what is a
 mathematician's favorite kind of knot?}
 
 \begin{center}\footnotesize
 \begin{tikzpicture}[x=0.2in,y=0.2in]
+  \draw[thick] (0,0) rectangle (6,6);
+  \draw[step=1] (0,0) grid (6,6);
+  \node[anchor=south] at (0.5,6) {\rotatebox{90}{Ash}};
+  \node[anchor=south] at (1.5,6) {\rotatebox{90}{Brock}};
+  \node[anchor=south] at (2.5,6) {\rotatebox{90}{Cynthia}};
+  \node[anchor=south] at (3.5,6) {\rotatebox{90}{Drayden}};
+  \node[anchor=south] at (4.5,6) {\rotatebox{90}{Erika}};
+  \node[anchor=south] at (5.5,6) {\rotatebox{90}{Flannery}};
+  \node[anchor=east] at (0,5.5) {1st};
+  \node[anchor=east] at (0,4.5) {2nd};
+  \node[anchor=east] at (0,3.5) {3rd};
+  \node[anchor=east] at (0,2.5) {4th};
+  \node[anchor=east] at (0,1.5) {5th};
+  \node[anchor=east] at (0,0.5) {6th};
+  \foreach \letters [count=\i] in {
+    {O,Y,G,U,S,J},
+    {Q,C,M,V,A,X},
+    {F,P,U,N,I,E},
+    {L,A,S,I,D,T},
+    {K,N,B,Z,T,R},
+    {H,R,W,E,L,M},
+  } {
+    \foreach \letter [count=\j] in \letters {
+      \node at ($(\j.5,-\i.5)+(-1,7)$) {\letter};
+    }
+  }
+\end{tikzpicture}
+\end{center}
+
+\phWorksheet{Teaser Puzzle Trainer Badges}
+
+\begin{multicols}{3}
+  \begin{center}
+    \includegraphics[width=1.5in]{assets/unknot1.pdf}
+
+    Ash and Flannery did not place 6th.
+
+
+    \includegraphics[width=1.5in]{assets/knot1.pdf}
+
+    Neither Brock nor Drayden placed 4th.
+
+
+    \includegraphics[width=1.5in]{assets/unknot2.pdf}
+
+    Erika placed exactly one rank higher than Ash.
+
+
+    \includegraphics[width=1.5in]{assets/knot2.pdf}
+
+    Drayden placed in the top three.
+
+
+    \includegraphics[width=1.5in]{assets/knot3.pdf}
+
+    Brock placed lower than Flannery.
+
+
+    \includegraphics[width=1.5in]{assets/unknot3.pdf}
+
+    Either Cynthia or Drayden placed 3rd.
+  \end{center}
+\end{multicols}
+
+\begin{center}
+\begin{tikzpicture}[x=0.35in,y=0.35in]
   \draw[thick] (0,0) rectangle (6,6);
   \draw[step=1] (0,0) grid (6,6);
   \node[anchor=south] at (0.5,6) {\rotatebox{90}{Ash}};
