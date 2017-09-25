@@ -1,9 +1,41 @@
 %!TEX root =../mapp-challenge-18-game-book.tex
 % ^ leave for LaTeXTools build functionality
 
-\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
+\begin{wrapfigure}{r}{0.33\textwidth} %this figure will be at the right
     \centering
-    \includegraphics[width=0.2\textwidth]{example-image-1x1}
+      \begin{tikzpicture}[x=0.2in,y=0.2in,every node/.style={circle,fill=lightgray,
+                          draw=black,text width=1em,align=center}]
+        \draw[thick] (2,0) -- (2,7) -- (4,7) -- (4,8) -- (10,8) --
+              (10,2) -- (7,2) -- (7,1) -- (6,1) -- (6,0) -- (2,0);
+        \draw[thick] (8,9) -- (8,3);
+        \draw[thick] (8,4) -- (10,4);
+        \draw[thick] (7,9) -- (10,9);
+        \draw[thick] (10,6) -- (4,6) -- (4,1) -- (6,1);
+        \draw[thick] (10,7) -- (11,7);
+        \draw[thick] (2,4) -- (0,4) -- (0,8);
+        \draw[thick] (6,1) -- (6,2);
+
+        \draw[fill=lightgray,draw=black] (2,2) circle (0.2);
+        \draw[fill=lightgray,draw=black] (2,4) circle (0.2);
+        \draw[fill=lightgray,draw=black] (2,5) circle (0.2);
+        \draw[fill=lightgray,draw=black] (2,7) circle (0.2);
+        \draw[fill=lightgray,draw=black] (5,8) circle (0.2);
+        \draw[fill=lightgray,draw=black] (8,8) circle (0.2);
+        \draw[fill=lightgray,draw=black] (10,9) circle (0.2);
+        \draw[fill=lightgray,draw=black] (8,4) circle (0.2);
+        \draw[fill=lightgray,draw=black] (8,3) circle (0.2);
+        \draw[fill=lightgray,draw=black] (10,6) circle (0.2);
+        \draw[fill=lightgray,draw=black] (6,6) circle (0.2);
+        \draw[fill=lightgray,draw=black] (8,6) circle (0.2);
+        \draw[fill=lightgray,draw=black] (6,1) circle (0.2);
+        \draw[fill=lightgray,draw=black] (6,2) circle (0.2);
+        \draw[fill=lightgray,draw=black] (4,0) circle (0.2);
+        \draw[fill=lightgray,draw=black] (2,0) circle (0.2);
+        \draw[fill=lightgray,draw=black] (11,7) circle (0.2);
+        \draw[fill=lightgray,draw=black] (0,6) circle (0.2);
+        \draw[fill=lightgray,draw=black] (0,8) circle (0.2);
+        \draw[fill=lightgray,draw=black] (7,9) circle (0.2);
+      \end{tikzpicture}
 \end{wrapfigure}
 
 Welcome to the world of \textbf{Mobile Monsters}, or \textbf{\mappMobimon}
