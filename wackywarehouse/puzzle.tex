@@ -94,39 +94,43 @@ The dockworker notices your good work.
 ``Hey, didya say you were aiming to become one of them \mappMobimon{}
 Champions? Maybe you're smart enough to solve this \textbf{puzzle} for me
 then.'' It seems that if you can count the following different combinations
-of stacked boxes, you'll be able to reveal a \textbf{hidden message} by
+of stacked boxes, you'll be able to reveal a \textbf{two-word hidden message} by
 converting the numbers to appropriate letters (A=1, B=2, and so on).
 
 \begin{multicols}{2}
+  \textbf{First word:}
   \begin{itemize}
     \item %M=13
-      The number of ways you can stack either \(2\) or \(6\) boxes.
+      The number of ways to stack \(2\) boxes plus
+      the number of ways to stack \(6\) boxes.
     \item %O=15
-      The number of ways you can stack \(12\) boxes, if every row must
-      contain an odd number.
+      The number of ways to stack \(12\) boxes,
+      if every row must contain an odd number.
     \item %U=21
-      The number of ways you can stack \(8\) boxes, if every row must contain
-      less than eight.
+      The number of ways to stack \(8\) boxes,
+      if every row must contain less than eight.
     \item %S=19
-      The number of ways you can stack up to \(5\) boxes. (An empty room
-      counts as one way...)
+      The number of ways to stack up to \(5\) boxes.
+      (An empty room counts as one way...)
     \item %E=5
-      The number of ways you can stack \(4\) boxes.
+      The number of ways to stack \(4\) boxes.
   \end{itemize}
 \columnbreak
+  \textbf{Second word:}
   \begin{itemize}
     \item %T=20
-      The number of ways you can stack \(8\) boxes, if every row must contain
-      less than seven.
+      The number of ways to stack \(8\) boxes,
+      if every row must contain less than seven.
     \item %R=18
-      The number of ways you can stack \(13\) boxes, if every row must have
-      less boxes than the row below it.
+      The number of ways to stack \(13\) boxes,
+      if every row must have less boxes than the row below it.
     \item %A=1
-      The number of ways you can stack \(42\) boxes, if you can only use one
-      row.
+      The number of ways to stack \(42\) boxes,
+      if you can only use one row.
     \item %P=16
-      The number of ways you can stack \(1\) or \(12\) boxes, if every row must
-      have a unique number of boxes.
+      The number of ways to stack \(1\) box plus
+      the number of ways to stack \(12\) boxes,
+      if every row must have a unique number of boxes.
   \end{itemize}
 \end{multicols}
 
