@@ -1,0 +1,104 @@
+\documentclass{../puzzlehunt}
+
+\usepackage[final]{pdfpages}
+\usepackage{amsmath,amssymb}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{lindenmayersystems}
+
+\usepackage{array}
+
+\usepackage{environ}
+
+\usepackage{chessfss}
+
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage{wrapfig}
+\usepackage{alphalph}
+\usepackage{contour}
+
+\usepackage{pigpen}%\renewcommand{\pigpenfont}{} %stopgap
+
+\usepackage[puttinydots]{braille}
+
+% Contest name macros
+\newcommand{\phEventName}{MaPP Challenge}
+\newcommand{\phEventAbbr}{Challenge}
+
+\title{\phEventName}
+\author{Mathematical Puzzle Programs}
+\date{\today}
+
+\parindent=0pt
+
+\newcommand{\mappMobimon}{Mob\'imon}
+\newcommand{\mappMobidex}{Mob\'idex}
+\newcommand{\mappMobidot}{Mob\`imon}
+\newcommand{\mappMobidash}{Mob\^imon}
+
+\newcommand{\blindCrissCrossEntry}[2]{
+  \draw[step=1,dotted] #1 grid #2;
+  \draw[very thick] #1 rectangle #2
+}
+\newcommand{\blindCrissCrossPip}[2]{
+  \draw[fill=black] (#1.5,#2.5) circle (0.3)
+}
+
+\newcommand{\morseDit}{\(\cdot\)}
+\newcommand{\morseDah}{\(-\)}
+
+
+% \phMarkDraft
+
+\phSetSquareLogo{../assets/mapp-square.pdf}
+\phSetBannerLogo{../assets/mapp-banner.pdf}
+
+\begin{document}
+
+% \frontmatter % roman page numbers
+
+% \phTitlePage
+% \phTableOfContents
+
+% \mainmatter % arabic page numbers
+
+\phChapterWorksheet{University of South Alabama}{Campus Map}
+
+\begin{center}
+  \includegraphics[width=0.8\linewidth]{south-map}
+\end{center}
+
+\begin{multicols}{2}
+  \begin{enumerate}
+    \item Alumni Hall
+    \item Archaeology Museum
+    \item Central Services Admin Building
+    \item Charles M. Baugh Biomedical Library
+    \item Chemistry Building
+    \item Computer Services Center
+    \item F.P. Whiddon Administration Building
+    \item Glass Arts Building
+    \item Humanities Building
+    \item Innovation in Learning Center
+    \item Life Sciences Building
+    \item Marx Library
+    \item Mathematical Sciences and Physics Building
+    \item Medical Sciences Building
+    \item Meisler Hall
+    \item Mobile Townhouse
+    \item Student Health Center
+    \item Tholos of Delphi Replica
+    \item USA Student Center
+    \item Visual Arts Complex
+  \end{enumerate}
+\end{multicols}
+
+Students will not need to cross USA South Dr, USA North Dr, or University Blvd.
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
