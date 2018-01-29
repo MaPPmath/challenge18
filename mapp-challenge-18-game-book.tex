@@ -19,9 +19,12 @@
 \usepackage{alphalph}
 \usepackage{contour}
 
-\usepackage{pigpen}\renewcommand{\pigpenfont}{} %stopgap for when pigpen fails
+% \usepackage{pigpen}\renewcommand{\pigpenfont}{} %stopgap for when pigpen fails
+\usepackage{pdfpages} % need longer term fix
 
 \usepackage[puttinydots]{braille}
+
+
 
 % Contest name macros
 \newcommand{\phEventName}{MaPP Challenge '18 - Gotta Solve 'Em All}
@@ -72,9 +75,10 @@
 \phChapter{Rules}
 \input{overview/rules.tex}
 
-\phChapter{Code Sheet}
-\input{overview/codes.tex}
-
+% FIXME
+% \phChapter{Code Sheet}
+% \input{overview/codes.tex}
+\includepdf{overview/code-sheet.pdf}
 
 \phChapter{Scoresheet}
 \input{overview/scoresheet.tex}
