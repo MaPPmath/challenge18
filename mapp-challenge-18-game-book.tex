@@ -5,6 +5,8 @@
 \usepackage{pgf,tikz}
 \usetikzlibrary{arrows}
 \usetikzlibrary{lindenmayersystems}
+\usetikzlibrary{shapes}
+
 
 \usepackage{array}
 
@@ -27,7 +29,7 @@
 
 
 % Contest name macros
-\newcommand{\phEventName}{MaPP Challenge '18 - Gotta Solve 'Em All}
+\newcommand{\phEventName}{MAA MathFest 2018 - MaPP Challenge DEMO} 
 \newcommand{\phEventAbbr}{Challenge18}
 
 \title{\phEventName}
@@ -53,7 +55,7 @@
 \newcommand{\morseDah}{\(-\)}
 
 
-% \phMarkDraft
+ \phMarkDraft
 
 \phSetSquareLogo{assets/mapp-square.pdf}
 \phSetBannerLogo{assets/mapp-banner.pdf}
@@ -67,76 +69,21 @@
 
 % \mainmatter % arabic page numbers
 
-\phPart{Game Overview}
-
-\phChapter{Story}
-\input{overview/story.tex}
-
-\phChapter{Rules}
-\input{overview/rules.tex}
-
 % FIXME
 % \phChapter{Code Sheet}
 % \input{overview/codes.tex}
 \includepdf{overview/code-sheet.pdf}
 
-\phChapter{Scoresheet}
-\input{overview/scoresheet.tex}
-
-\phChapter{Campus Guidelines}
-\input{overview/campus.tex}
-
-
-
-%opening puzzle
-\phPart{Opening Puzzle}
-\input{opening/puzzle.tex}
-
-% %main puzzles
-\phPart{Main Puzzles}
-\input{gogetem/puzzle.tex}
-\input{wackywarehouse/puzzle.tex}
-\input{namerater/puzzle.tex}
-\input{doppl/puzzle.tex}
-
-
-% bonus puzzle
-\phPart{Bonus Puzzle}
-\input{bonuspuzzle/puzzle.tex}
-
-
-\phPart{Cryptic Puzzles}
-\input{civicduty/puzzle.tex}
-\input{wordsearch/puzzle.tex}
-\input{blind/puzzle.tex}
-\input{pigpen/puzzle.tex}
-
-\phPart{Metapuzzle}
-\input{tournament/puzzle.tex}
-
-\phPart{Appendix}
-\phChapter{Solutions}
-\input{overview/solutions.tex}
-
 \input{teaser/puzzle.tex}
 
-\phChapter{ClueKeeper FAQs}
-\input{overview/cluekeeper.tex}
+% %main puzzles
+\input{wackywarehouse/puzzle.tex}
+\input{namerater/puzzle.tex}
 
-%blank pages
-\phChapter{}
-\newpage
 
-\vspace*{\fill}
+\input{wordsearch/puzzle.tex}
+\input{blind/puzzle.tex}
 
-\rotatebox{90}{\includegraphics[width=5in]{assets/mapp-banner.pdf}}
-
-\vfill
-
-\newpage
-
-\phChapter{Credits}
-\input{overview/credits.tex}
 
 \end{document}
 

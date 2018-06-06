@@ -1,137 +1,58 @@
 %!TEX root =../mapp-challenge-18-game-book.tex
 % ^ leave for LaTeXTools build functionality
 
-\phChapterWorksheet{When Push Comes to Shove}{Main Puzzle 2}
+\phChapterWorksheet{When Push Comes to Shove}{Warehouse Specifications}
 
-\newcommand{\mappBoxRow}[2]{
-  \fill[color=lightgray] #1 rectangle #2;
-  \draw[step=1]          #1 grid #2;
-}
-
-% http://oeis.org/A000041 number of partitions
-% http://oeis.org/A000009 number of odd/distinct partitions
-
-While training your \mappMobimon{} on Road \(\sqrt{9^2+12^2}\), you are
-approached
-by \textbf{Dockworker Dave}, who challenges you to a \mappMobidot{} battle!
-Of course you accept... turning him down would be \textbf{rude},
-don't you think?
-
-It's a close match, but you win! As Dave gives you your victory money, he
-tells you about a group of \textbf{Tattarat} \mappMobimon{} that infest the
-warehouse he works in. These obnoxious critters like to
-\textbf{rearrange the boxes} in his warehouse, so Dave cuts you a deal.
-He'll let you catch a Tattarat for your team, but only if you help
-him reorganize his boxes.
-
-The boxes in the warehouse must be \textbf{stacked} so that
-each row of boxes is always pressed up against the \textbf{left wall} of the
-warehouse, and each row of boxes must have the \textbf{same or less boxes} than
-every lower row.
-
-Other than that, it's up to you. For example, there are \textbf{seven}
-different ways to stack \textbf{five} boxes.
-
-\begin{center}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(5,1)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(4,1)}
-    \mappBoxRow{(0,1)}{(1,2)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(3,1)}
-    \mappBoxRow{(0,1)}{(2,2)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(3,1)}
-    \mappBoxRow{(0,1)}{(1,2)}
-    \mappBoxRow{(0,2)}{(1,3)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(2,1)}
-    \mappBoxRow{(0,1)}{(2,2)}
-    \mappBoxRow{(0,2)}{(1,3)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(2,1)}
-    \mappBoxRow{(0,1)}{(1,2)}
-    \mappBoxRow{(0,2)}{(1,3)}
-    \mappBoxRow{(0,3)}{(1,4)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-  \begin{tikzpicture}[x=0.15in,y=0.15in]
-    \mappBoxRow{(0,0)}{(1,1)}
-    \mappBoxRow{(0,1)}{(1,2)}
-    \mappBoxRow{(0,2)}{(1,3)}
-    \mappBoxRow{(0,3)}{(1,4)}
-    \mappBoxRow{(0,4)}{(1,5)}
-
-    \draw[thick] (0,0) -- (0, 5);
-    \draw[thick] (0,0) -- (5, 0);
-  \end{tikzpicture}
-\end{center}
-
-The dockworker notices your good work.
-``Hey, didya say you were aiming to become one of them \mappMobimon{}
-Champions? Maybe you're smart enough to solve this \textbf{puzzle} for me
-then.'' It seems that if you can count the following different combinations
-of stacked boxes, you'll be able to reveal a \textbf{two-word hidden message} by
-converting the numbers to appropriate letters (A=1, B=2, and so on).
-
-\begin{multicols}{2}
-  \textbf{First word:}
+\begin{multicols}{2}\raggedcolumns
+  \begin{minipage}{\linewidth}
+  \begin{center}\textbf{Warehouse 1:}\end{center}
   \begin{itemize}
     \item %M=13
-      The number of ways to stack \(2\) boxes plus
-      the number of ways to stack \(6\) boxes.
+      Stack either \(2\) boxes or \(6\) boxes
+      against a wall.
+
+      \vspace{6em}
     \item %O=15
-      The number of ways to stack \(12\) boxes,
-      if every row must contain an odd number.
+      Stack \(12\) boxes against a wall such that
+      every row contains an odd number.
+
+      \vspace{6em}
     \item %U=21
-      The number of ways to stack \(8\) boxes,
-      if every row must contain less than eight.
+      Stack \(8\) boxes against a wall such that
+      every row contains less than eight.
+
+      \vspace{6em}
     \item %S=19
-      The number of ways to stack up to \(5\) boxes.
-      (An empty room counts as one way...)
+      Stack \(0\), \(1\), \(2\), \(3\), \(4\)
+      or \(5\) boxes against a wall.
+
+      \vspace{6em}
     \item %E=5
-      The number of ways to stack \(4\) boxes.
+      Stack \(4\) boxes against a wall.
   \end{itemize}
-\columnbreak
-  \textbf{Second word:}
+  \end{minipage}
+  \begin{minipage}{\linewidth}
+  \begin{center}\textbf{Warehouse 2:}\end{center}
   \begin{itemize}
     \item %T=20
-      The number of ways to stack \(8\) boxes,
-      if every row must contain less than seven.
+      Stack \(8\) boxes against a wall such that
+      every row contains less than seven.
+
+      \vspace{6em}
     \item %R=18
-      The number of ways to stack \(13\) boxes,
-      if every row must have less boxes than the row below it.
+      Stack \(13\) boxes against a wall such that
+      every row has less boxes than the row below it.
+
+      \vspace{6em}
     \item %A=1
-      The number of ways to stack \(42\) boxes,
-      if you can only use one row.
+      Stack \(42\) boxes against a wall in a single row.
+
+      \vspace{6em}
     \item %P=16
-      The number of ways to stack \(1\) box plus
-      the number of ways to stack \(12\) boxes,
-      if every row must have a unique number of boxes.
+      Stack either \(1\) box or \(12\) boxes such that
+      every row must have a unique number of boxes.
   \end{itemize}
+  \end{minipage}
 \end{multicols}
 
 

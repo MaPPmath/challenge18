@@ -1,77 +1,46 @@
 %!TEX root =../mapp-challenge-18-game-book.tex
 % ^ leave for LaTeXTools build functionality
 
-\phChapterWorksheet{The Nickname Rater}{Main Puzzle 3}
+\phChapterWorksheet{The Nickname Rater}{Popular Nicknames}
 % https://en.wikipedia.org/wiki/MU_puzzle
 
-As your adventure continues, you find yourself in
-\textbf{Achromatopsia City}, located at the end of Road \(20.7183-e\)
-and home of the famous \mappMobidash{} \textbf{Nickname Rater}.
-She explains that while Trainers often like to give their
-\mappMobidot{} cute nicknames, she's very particular about the rules
-for an \textbf{excellent} \mappMobidash{} nickname.
-For clarity, you can assume
-that a \textbf{vowel} is any of the letters \texttt{A/E/I/O/U}, and a
-\textbf{consonant} is any other English letter.
+\begin{center}
+\begin{tikzpicture}[x=2.2in,y=-1.4in]\Large
+  \node at (0,0) {\texttt{MANKAY}};
+  \node at (0,1) {\texttt{ULTRAMON}};
+  \node[draw,ellipse] at (0,2) {\texttt{OMASTARE}};
+  \node at (0,3) {\texttt{VOLTEON}};
+  \node at (0,4) {\texttt{GENGASKHAN}};
+  
+  \node[draw,cross out] at (1,0) {\texttt{EEVOL}};
+  \node at (1,1) {\texttt{NOHTYP}};
+  \node at (1,2) {\texttt{SLIQUID}};
+  \node at (1,3) {\texttt{ICHU}};
+  \node at (1,4) {\texttt{KADABARA}};
 
-\begin{multicols}{2}
-\begin{itemize}
-  \item \textbf{Rule 0:}
-        \texttt{A} is an excellent nickname.
-  \item \textbf{Rule 1:}
-        Adding a consonant to the end of an excellent nickname ending with
-        a vowel creates a new excellent nickname.
-  \item \textbf{Rule 2:}
-        Doubling an excellent nickname creates a new excellent nickname.
-  \item \textbf{Rule 3:}
-        Replacing three consecutive vowels in an excellent nickname with
-        a consonant creates a new excellent nickname.
-  \item \textbf{Rule 4:}
-        Removing two consecutive consonants from an excellent nickname
-        creates a new excellent nickname.
-  \item \textbf{Rule 5:}
-        Exchanging the consonants in an excellent nickname with other
-        consonants creates a new excellent nickname. Similarly,
-        exchanging the vowels in an excellent nickname with other vowels
-        creates a new excellent nickname.
-  \item Nicknames that cannot be created using these rules are not
-        excellent.
-\end{itemize}
-\end{multicols}
+  \node at (2,0) {\texttt{AERODYCTL}};
+  \node[draw,ellipse] at (2,1) {\texttt{EWE}};
+  \node at (2,2) {\texttt{PARACENT}};
+  \node at (2,3) {\texttt{DRAGONAT}};
+  \node at (2,4) {\texttt{RAGMAR}};
 
-For example, \texttt{A} (Rule 0), \texttt{AA} (Rule 2), \texttt{AAAA} (Rule 2),
-\texttt{SA} (Rule 3), \texttt{SAM} (Rule 1), \texttt{SAMSAM} (Rule 2),
-\texttt{SAAM} (Rule 4), and \texttt{NEAT} (Rule 5) are all excellent nicknames.
+\small
+  \node at (0,2.2) {\texttt{A} (Rule 0)};
+  \node at (0,2.3) {\(\rightarrow\) \texttt{AAAAAAAAAAAAAAAA} (Rule 2, four times)};
+  \node at (0,2.4) {\(\rightarrow\) \texttt{AMASTARA} (Rule 3, four times)};
+  \node at (0,2.5) {\(\rightarrow\) \texttt{OMASTARE} (Rule 5)};
 
-The Nickname Rater, not one to shy away from a good \textbf{puzzle}, offers you
-the chance to rate the following \mappMobidot{} nicknames yourself.  You'll know
-when you've done it correctly, because if you \textbf{take the first letters of
-the excellent nicknames below} in order, you will spell a good
-\textbf{seven-letter word for a nickname}
-(even if it's not particularly \textbf{excellent} itself).
+  \node[text width=1.5in,align=center,anchor=north] at (1,0.1) {It seems there's no way to construct this name using the given rules...};
 
-% note: excellent nicknames cannot have 0(mod3) vowels
+  \node at (2,1.2) {\texttt{A} (Rule 0)};
+  \node at (2,1.3) {\(\rightarrow\) \texttt{E} (Rule 5)};
+  \node at (2,1.4) {\(\rightarrow\) \texttt{EEEEEEEE} (Rule 2, three times)};
+  \node at (2,1.5) {\(\rightarrow\) \texttt{EEEEEEEEW} (Rule 1)};
+  \node at (2,1.6) {\(\rightarrow\) \texttt{EWEWW} (Rule 3, twice)};
+  \node at (2,1.7) {\(\rightarrow\) \texttt{EWE} (Rule 4)};
+\end{tikzpicture}
+\end{center}
 
-\begin{multicols}{3}
-  \begin{itemize}
-    % \item \texttt{PIDGEON} %non-excellent (3 vowels)
-    \item \texttt{MANKAY} %4As->BA->B->BABBAB           %M
-    \item \texttt{ULTRAMON} %non-excellent (3 vowels)
-    \item \texttt{OMASTARE} %16As->ABABBABA             %O
-    \item \texttt{VOLTEON} %non-excellent (3 vowels)
-    \item \texttt{GENGASKHAN} %non-excellent (3 vowels)
-    \item \texttt{EEVOL} %non-excellent (3 vowels)
-    \item \texttt{NOHTYP} %16As->BABBBB                 %N
-    \item \texttt{BLASTMOIST} %non-excellent (3 vowels)
-    \item \texttt{ICHU} %8As->ABBA                      %I
-    \item \texttt{KADABARA} %4As->BA->BABABABA          %K
-    \item \texttt{AERODYCTL} %non-excellent (3 vowels)
-    \item \texttt{PARACENT} %non-excellent (3 vowels)
-    \item \texttt{EARSEA} %16As->AABBAABB->AABBAA       %E
-    \item \texttt{DRAGONAT} %non-excellent (3 vowels)
-    \item \texttt{RAGMAR} %4As->BA->BAB->BABBAB         %R
-  \end{itemize}
-\end{multicols}
 
 % Include below for aucTeX integration
 %%% Local Variables:
