@@ -89,12 +89,250 @@
 
 \phPart{Game Control Documents}
 
-\phChapter{Knot True}
-The following six pages should be printed and laminated.
-They are put on display around the game area for use
-in the opening puzzle.
+\phChapter{Printing instructions}
+\begin{itemize}
+\item A copy of the \textbf{Player Handout} section of this PDF should
+be printed and stapled for each participant, using the PDF title page
+as the cover.
+
+\item The six \textbf{Knot True Badges} should be printed and laminated
+for display during the Opening Puzzle.
+Extras should also be available as backups (lamination optional).
+
+\item Several \textbf{ClueKeeper Reference} packets should be printed
+and compiled for use by Game Control, and to hand out in case
+players cannot install ClueKeeper for the demo.
+\end{itemize}
+
 
 \input{teaser/badges}
+
+\phChapter{Cluekeeper Reference}
+
+\phSection{Knot True -- Introduction}
+
+In a recent Mob\'imon tournament, six Mob\'imon trainers were ranked from 1st to 6th:
+
+\begin{multicols}{3}
+\begin{itemize}
+\item Ash
+\item Brock
+\item Cynthia
+\item Drayden
+\item Erika
+\item Flannery
+\end{itemize}
+\end{multicols}
+
+To prove to your mentor, Professor Sassafras, that you are ready to embark on your Mob\'imon adventure, she has tasked you with finding these six trainers and ask them what they remember about the tournament results.
+
+To obtain their six clues, look for six \textbf{Trainer Badges} found on posters located nearby, and enter the \textbf{Trainer ID} shown for each into ClueKeeper.
+
+\vfill
+
+\phSection{Knot True -- Clues unlocked by each badge}
+
+\begin{multicols}{3}\footnotesize
+  \begin{center}
+    \includegraphics[width=1.2in]{assets/unknot1.pdf}
+
+    Ash and Flannery did not place 6th.
+
+
+    \includegraphics[width=1.2in]{assets/knot1.pdf}
+
+    Neither Brock nor Drayden placed 4th.
+
+
+    \includegraphics[width=1.2in]{assets/unknot2.pdf}
+
+    Erika placed exactly one rank higher than Ash.
+
+
+    \includegraphics[width=1.2in]{assets/knot2.pdf}
+
+    Drayden placed in the top three.
+
+
+    \includegraphics[width=1.2in]{assets/knot3.pdf}
+
+    Brock placed lower than Flannery.
+
+
+    \includegraphics[width=1.2in]{assets/unknot3.pdf}
+
+    Either Cynthia or Drayden placed 3rd.
+  \end{center}
+\end{multicols}
+
+\newpage
+
+\phSection{Knot True -- Final clue unlocked by collecting badges}
+
+Wait a second... it seems that not all of the six trainers are telling the truth! You'll need to determine which of the trainers are lying by inspecting their trainer badges. If the cord shown in a badge can be tightened into a knot, then that trainer is lying; if not, they are telling the truth!
+
+Use the clues associated with each Trainer Badge and the provided \textbf{Tournament Results} 
+page to mark how each trainer placed in the tournament. Doing so correctly will reveal a word. 
+Enter this word into ClueKeeper to prove to Professor Sassafras that you're ready to begin your 
+Mob\'imon adventure!
+
+\vfill
+
+\phSection{When Push Comes to Shove -- Main Puzzle 1}
+
+While training your Mob\'imon near the wharf, you lock eyes with Dockworker Dave. As everyone knows, when two trainers' eyes meet, it's time for a Mob\'imon battle!
+
+You're still a beginner though, so you manage to talk him down to a puzzle. Dave agrees, and shows you the image shown below. He explains that this illustration demonstrates the seven different ways that five boxes can be stacked flush against the wall of his warehouse.
+
+It seems that some rat Mob\'imon have thrown the warehouse into disarray, so you'll need to help Dave calculate how many different ways his boxes can be rearranged according to the criteria shown on the provided 
+\textbf{Warehouse Specifications} sheet. Calculating these possibilities and using the encoding A=1, B=2, etc. will reveal the solution to this puzzle!
+
+\newcommand{\mappBoxRow}[2]{
+  \fill[color=lightgray] #1 rectangle #2;
+  \draw[step=1]          #1 grid #2;
+}
+\begin{center}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(5,1)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(4,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(3,1)}
+    \mappBoxRow{(0,1)}{(2,2)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(3,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(2,1)}
+    \mappBoxRow{(0,1)}{(2,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(2,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+    \mappBoxRow{(0,3)}{(1,4)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+  \begin{tikzpicture}[x=0.15in,y=0.15in]
+    \mappBoxRow{(0,0)}{(1,1)}
+    \mappBoxRow{(0,1)}{(1,2)}
+    \mappBoxRow{(0,2)}{(1,3)}
+    \mappBoxRow{(0,3)}{(1,4)}
+    \mappBoxRow{(0,4)}{(1,5)}
+
+    \draw[thick] (0,0) -- (0, 5);
+    \draw[thick] (0,0) -- (5, 0);
+  \end{tikzpicture}
+\end{center}
+
+\vfill
+
+\newpage
+
+\phSection{The Nickname Rater -- Main Puzzle 2}
+
+As your adventure continues, you find yourself in
+Achromatopsia City,
+home of the famous \mappMobimon{} Nickname Rater.
+She explains that while Trainers often like to give their
+\mappMobimon{} cute nicknames, she's very particular about the rules
+for an ``excellent'' \mappMobimon{} nickname.
+
+\begin{multicols}{2}
+\begin{itemize}
+  \item \textbf{Rule 0:}
+        \texttt{A} is an excellent nickname.
+  \item \textbf{Rule 1:}
+        Adding a consonant to the end of an excellent nickname ending with
+        a vowel creates a new excellent nickname.
+  \item \textbf{Rule 2:}
+        Doubling an excellent nickname creates a new excellent nickname.
+  \item \textbf{Rule 3:}
+        Replacing three consecutive vowels in an excellent nickname with
+        a consonant creates a new excellent nickname.
+  \item \textbf{Rule 4:}
+        Removing two consecutive consonants from an excellent nickname
+        creates a new excellent nickname.
+  \item \textbf{Rule 5:}
+        Exchanging the consonants in an excellent nickname with other
+        consonants creates a new excellent nickname. Similarly,
+        exchanging the vowels in an excellent nickname with other vowels
+        creates a new excellent nickname.
+  \item Nicknames that cannot be created using these rules are not
+        excellent.
+\end{itemize}
+\end{multicols}
+
+The Nickname Rater suggests you try rating the nicknames shown on the provided 
+\textbf{Popular Nicknames} sheet. Apparently if you take the first letters of the excellent nicknames in order, you can spell a great (but not excellent) seven-letter word for a nickname.
+
+\vfill
+
+\phSection{Cross Product -- Cryptic Puzzle 1}
+
+Impressed with your problem-solving ability, the dockworker suggests you head to the \mappMobimon{} Dojo. There, the Dojo Master agrees to battle you, but only if you can solve his puzzle. He presents you a copy of an 
+\textbf{Odd Scroll} and the following clues:
+
+\begin{itemize}
+\item \textit{Only a trainer that has one of these can possibly become HIPCONAM.}
+\begin{itemize}
+\item Lightning \(\times\) Plant
+\item Undead \(\times\) Flame 
+\item Aqua \(\times\) Ordinary
+\item Flame \(\times\) Magic
+\end{itemize}
+\end{itemize}
+
+Can you \textit{unscramble} the meaning of the Dojo Master's scroll, putting you one step closer to becoming a \mappMobimon{} Champion?
+
+\vfill
+
+\newpage
+
+\phSection{Blind Luck -- Cryptic Puzzle 2}
+
+The Nickname Rater suggests you continue your journey just down the road, where the sightless Dojo Master is known to battle up-and-coming Mob\'imon trainers.
+
+You arrive at the dojo, but it seems that a secret
+password is required to enter, and your only clue is the \textbf{Strange Tilework} leading to the dojo's door.
+
+After scratching your head for a bit, you lean against the door. You hear a low whisper carry the following words into your ear:
+
+\begin{itemize}
+\item RED
+\item BLUE
+\item YELLOW
+\item GOLD
+\item SILVER
+\item CRYSTAL
+\end{itemize}
+
+
+Are these the clues you need to figure out the secret password?
 
 \end{document}
 
